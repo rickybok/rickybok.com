@@ -59,6 +59,7 @@ interface Volunteer {
   endDate: DateStr;
   summary: string;
   highlights: Highlight;
+  location: Location;
 }
 
 interface Skills {
@@ -142,4 +143,4 @@ interface References {
   reference: string;
 }
 
-type Highlight = Array<String>;
+type Highlight = Array<string>;

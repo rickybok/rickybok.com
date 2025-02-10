@@ -4,6 +4,7 @@ import Layout from "@/layouts/Layout.astro";
 import About from "@/components/sections/About.astro";
 import Education from "@/components/sections/Education.astro";
 import Experience from "@/components/sections/Experience.astro";
+import Volunteer from "@/components/sections/Volunteer.astro";
 import Hero from "@/components/sections/Hero.astro";
 import Projects from "@/components/sections/Projects.astro";
 import Skills from "@/components/sections/Skills.astro";
@@ -24,6 +25,7 @@ const { name, label } = basics;
 		</div>
 		<div class="space-y-12 md:col-span-4 print:col-span-1 print:grid print:grid-cols-4 print:gap-2 print:space-y-0">
 			<Experience className="print:col-span-3" />
+			<Volunteer className="print:col-span-3" />
 			<Projects className="print:hidden" />
 			<Skills className="print:hidden" />
 			<Education className="order-first" />
