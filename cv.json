@@ -48,13 +48,7 @@
         "Mentoring members of the team to foster knowledge sharing and maintain high coding standards.",
         "Participated in code reviews and contributed to improving coding standards within the team."
       ],
-      "skills": [
-        "React",
-        "TypeScript",
-        "Cypress",
-        "GraphlQL",
-        "GitHub"
-      ]
+      "skills": ["React", "TypeScript", "Cypress", "GraphlQL", "GitHub"]
     },
     {
       "name": "digi.me",
@@ -71,14 +65,7 @@
         "Developed a Node.js SDK to help third parties utilise the digi.me private sharing platform. Used Typescript, and runtime type checking using io-ts",
         "Developed internal full stack web applications or engineering tools. Built on Next.JS or Express.JS frameworks, using Typescript, React, Xstate."
       ],
-      "skills": [
-        "NextJS",
-        "TypeScript",
-        "React",
-        "Redux",
-        "Electron",
-        "GitHub"
-      ]
+      "skills": ["NextJS", "TypeScript", "React", "Redux", "Electron", "GitHub"]
     },
     {
       "name": "Fujifilms",
@@ -88,11 +75,7 @@
       "startDate": "2011-08-01",
       "endDate": "2015-07-01",
       "summary": "Worked on a cross platform digital imaging point of sales software which allowed users to design and create their own photobooks/canvas etc. online or on kiosks. I was involved in a major overhaul of the software that included using templates that instructed how elements are laid out on the fly.",
-      "skills": [
-        "ActionScript",
-        "Flex",
-        "Adobe AIR"
-      ]
+      "skills": ["ActionScript", "Flex", "Adobe AIR"]
     }
   ],
   "volunteer": [
@@ -130,46 +113,27 @@
     {
       "name": "Figma",
       "level": "Expert",
-      "keywords": [
-        "Design",
-        "UI"
-      ]
+      "keywords": ["Design", "UI"]
     },
     {
       "name": "Gitlab",
       "level": "Intermediate",
-      "keywords": [
-        "Version Control",
-        "Collaboration",
-        "Source Code"
-      ]
+      "keywords": ["Version Control", "Collaboration", "Source Code"]
     },
     {
       "name": "HTML",
       "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend"
-      ]
+      "keywords": ["Web Development", "Frontend"]
     },
     {
       "name": "CSS",
       "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "Responsive Design"
-      ]
+      "keywords": ["Web Development", "Frontend", "Responsive Design"]
     },
     {
       "name": "JavaScript",
       "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "Backend",
-        "Fullstack"
-      ]
+      "keywords": ["Web Development", "Frontend", "Backend", "Fullstack"]
     },
     {
       "name": "Tailwind",
@@ -194,41 +158,22 @@
     {
       "name": "Node",
       "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Backend",
-        "JavaScript",
-        "Server"
-      ]
+      "keywords": ["Web Development", "Backend", "JavaScript", "Server"]
     },
     {
       "name": "MySQL",
       "level": "Intermediate",
-      "keywords": [
-        "Databases",
-        "SQL",
-        "Data Storage",
-        "Backend"
-      ]
+      "keywords": ["Databases", "SQL", "Data Storage", "Backend"]
     },
     {
       "name": "Git",
       "level": "Intermediate",
-      "keywords": [
-        "Version Control",
-        "Collaboration",
-        "Source Code"
-      ]
+      "keywords": ["Version Control", "Collaboration", "Source Code"]
     },
     {
       "name": "GitHub",
       "level": "Intermediate",
-      "keywords": [
-        "Version Control",
-        "Collaboration",
-        "Source Code",
-        "Git"
-      ]
+      "keywords": ["Version Control", "Collaboration", "Source Code", "Git"]
     },
     {
       "name": "Next.js",
@@ -244,12 +189,7 @@
     {
       "name": "React",
       "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "JavaScript Library",
-        "UI"
-      ]
+      "keywords": ["Web Development", "Frontend", "JavaScript Library", "UI"]
     }
   ],
   "languages": [
