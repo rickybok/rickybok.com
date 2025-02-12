@@ -7,7 +7,7 @@
     "url": "https://rickybok.com",
     "image": "/me_avatar.jpg",
     "summary": "Senior Typescript Engineer with 17+ years of front and back-end web development experience. I have expertise in leading multinational software development teams, designing, documenting, implementing, and delivering software solutions that span across platforms.",
-    "theme": "red",
+    "theme": "green",
     "location": {
       "address": "",
       "postalCode": "10001",
@@ -18,18 +18,13 @@
     "profiles": [
       {
         "network": "LinkedIn",
-        "username": "john-doe",
-        "url": "https://linkedin.com/in/john-doe"
-      },
-      {
-        "network": "X",
-        "username": "john-doe",
-        "url": "https://x.com/john-doe"
+        "username": "rickybok",
+        "url": "https://www.linkedin.com/in/rickybok/"
       },
       {
         "network": "GitHub",
-        "username": "johndoe",
-        "url": "https://github.com/johndoe"
+        "username": "rickybok",
+        "url": "https://github.com/rickybok"
       }
     ]
   },
@@ -110,11 +105,7 @@
   ],
   "certificates": [],
   "skills": [
-    {
-      "name": "Figma",
-      "level": "Expert",
-      "keywords": ["Design", "UI"]
-    },
+    { "name": "Figma", "level": "Expert", "keywords": ["Design", "UI"] },
     {
       "name": "Gitlab",
       "level": "Intermediate",
@@ -193,22 +184,10 @@
     }
   ],
   "languages": [
-    {
-      "language": "English",
-      "fluency": "Native speaker"
-    },
-    {
-      "language": "Cantonese",
-      "fluency": "Native speaker"
-    },
-    {
-      "language": "Mandarin",
-      "fluency": "Native speaker"
-    },
-    {
-      "language": "Spanish",
-      "fluency": "Intermediate"
-    }
+    { "language": "English", "fluency": "Native speaker" },
+    { "language": "Cantonese", "fluency": "Native speaker" },
+    { "language": "Mandarin", "fluency": "Native speaker" },
+    { "language": "Spanish", "fluency": "Intermediate" }
   ],
   "interests": [],
   "references": [],

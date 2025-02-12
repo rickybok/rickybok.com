@@ -1,5 +1,6 @@
 ---
 import Section from "../Section.astro"
+import FormattedDate from "../FormattedDate.astro"
 import { volunteer } from "@cv"
 ---
 
@@ -16,21 +17,16 @@ import { volunteer } from "@cv"
           url,
           location,
         }) => {
-          const startYear = new Date(startDate).getFullYear()
-          const endYear =
-            endDate != null ? new Date(endDate).getFullYear() : "Present"
-
           return (
             <li class="relative print:py-2">
               <div class="group relative grid pb-1 print:pb-0 transition-all print:grid-cols-1 print:gap-1 sm:grid-cols-12 sm:gap-8 md:gap-6 lg:hover:!opacity-100 ">
-                <header class="relative mt-1 text-xs font-semibold sm:col-span-2">
-                  <time datetime={startDate} data-title={startDate}>
-                    {startYear}
-                  </time>{" "}
-                  -{" "}
-                  <time datetime={endDate} data-title={endDate}>
-                    {endYear}
-                  </time>
+                <header class="sticky top-10 mt-1 text-xs font-semibold sm:col-span-2">
+                  <FormattedDate date={startDate} /> -
+                  {endDate != null ? (
+                    <FormattedDate date={endDate} />
+                  ) : (
+                    "Present"
+                  )}
                 </header>
                 <div class="relative flex flex-col pb-6 print:pb-0 before:-ml-6 sm:col-span-10 before:w-px print:before:hidden before:absolute before:bg-skin-muted before:h-full before:mt-2">
                   <div class="absolute w-2 h-2 bg-skin-muted rounded-full mt-2 -translate-x-[1.71rem] ring print:hidden ring-skin-fill" />
@@ -77,7 +73,7 @@ import { volunteer } from "@cv"
                     <div class="text-xs text-skin-muted">{location}</div>
                   )}
                   <div
-                    class="mt-4  print:gap-0 flex flex-col gap-4 print:text-xs text-sm"
+                    class="mt-4  print:gap-0 flex flex-col gap-4 print:text-xs text-m"
                     x-data="{ expanded: false }"
                   >
                     {summary && (

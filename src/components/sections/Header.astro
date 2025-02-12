@@ -1,0 +1,42 @@
+---
+const { title } = Astro.props
+---
+
+<div class="sticky top-0 mt-28 header">
+  <header class="flex flex-col max-w-4xl my-4">
+    {title && <h1>{title}.</h1>}
+    <slot />
+  </header>
+</div>
+
+<style>
+  h1 {
+    @apply text-5xl font-bold print:text-3xl;
+  }
+  .header {
+    background: rgb(var(--color-fill));
+    z-index: 999;
+    top: -1px;
+  }
+  .header.stuck {
+    border-bottom: 1px solid rgb(var(--color-button-muted));
+    h1 {
+      @apply text-2xl font-bold print:text-3xl;
+    }
+  }
+</style>
+
+<script>
+  const stickyElm = document.querySelector(".header")
+  const observer = new IntersectionObserver(
+    ([e]) => {
+      e.target.classList.toggle("stuck", e.intersectionRatio < 1)
+    },
+    { threshold: [1] },
+  )
+
+  if (stickyElm !== null) {
+    console.log("observing")
+    observer.observe(stickyElm)
+  }
+</script>

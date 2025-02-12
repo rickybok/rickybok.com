@@ -1,5 +1,6 @@
 @tailwind base;
 @layer base {
+
   :root {
     --color-text-base: 0, 0, 0;
     --color-text-muted: 120, 120, 120;
@@ -89,7 +90,7 @@
     }
     [data-theme="green"] {
       --color-text-base: 230, 230, 230;
-      --color-text-muted: 104, 124, 104;
+      --color-text-muted: 204, 204, 204;
       --color-text-inverted: 230, 230, 230;
       --color-fill: 10, 20, 10;
       --muted: 54, 64, 54;

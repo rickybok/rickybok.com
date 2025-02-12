@@ -28,25 +28,12 @@ export default {
         },
       },
       colors: {
-        skin: {
-          hue: withOpacity("--color"),
-          muted: withOpacity("--muted"),
-        },
+        skin: { hue: withOpacity("--color"), muted: withOpacity("--muted") },
       },
-      ringColor: {
-        skin: {
-          fill: withOpacity("--color-fill"),
-        },
-      },
-      gradientColorStops: {
-        skin: {
-          hue: withOpacity("--color-fill"),
-        },
-      },
+      ringColor: { skin: { fill: withOpacity("--color-fill") } },
+      gradientColorStops: { skin: { hue: withOpacity("--color-fill") } },
     },
   },
-  variants: {
-    extend: {},
-  },
+  variants: { extend: {} },
   plugins: [],
 };

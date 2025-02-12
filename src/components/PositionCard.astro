@@ -1,0 +1,46 @@
+---
+import type { Work } from "@/cv"
+
+interface Props {
+  position: string
+  location: string
+  company: string
+  top: number
+}
+
+const { top = 20, position } = Astro.props
+---
+
+<div class=`sticky header top-${top} text-right pr-4`>
+  <slot />
+  <h2>{position}</h2>
+</div>
+
+<style>
+  h2 {
+    @apply text-sm;
+  }
+  .header {
+  }
+  .header.stuck {
+    border-bottom: 1px solid rgb(var(--color-button-muted));
+    span {
+      color: #ff0000;
+    }
+  }
+</style>
+
+<script>
+  const stickyElm = document.querySelector(".header")
+  const observer = new IntersectionObserver(
+    ([e]) => {
+      console.log("Activation", e)
+      e.target.classList.toggle("stuck", e.intersectionRatio < 1)
+    },
+    { threshold: [1] },
+  )
+
+  if (stickyElm !== null) {
+    observer.observe(stickyElm)
+  }
+</script>
