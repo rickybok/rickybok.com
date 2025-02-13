@@ -1,46 +1,75 @@
 ---
-import type { Work } from "@/cv"
+import Duration from "./sections/Duration.astro"
+import Location from "./sections/Location.astro"
 
 interface Props {
   position: string
-  location: string
+  location: { city: string; region?: string; countryCode?: string }
+  location_type: string
   company: string
+  url: string | undefined
   top: number
+  startDate: string
+  endDate: string | null
 }
 
-const { top = 20, position } = Astro.props
+const {
+  top = 20,
+  position,
+  company,
+  url,
+  startDate,
+  endDate,
+  location,
+} = Astro.props
 ---
 
-<div class=`sticky header top-${top} text-right pr-4`>
-  <slot />
-  <h2>{position}</h2>
+<div
+  class=`sticky flex flex-col top-${top} positionCard text-right pr-4 gap-2 pb-4`
+>
+  <div class="flex flex-col">
+    <h2 class="font-semibold">{position}</h2>
+    <Duration startDate={startDate} endDate={endDate} />
+    <div>
+      <span>@</span>
+      {
+        url ? (
+          <a
+            class="text-skin-hue"
+            href={url}
+            title={`Ver ${company}`}
+            target="_blank"
+          >
+            {company}
+          </a>
+        ) : (
+          <span>{company}</span>
+        )
+      }
+    </div>
+  </div>
+  {
+    location && (
+      <Location
+        city={location.city}
+        region={location.region}
+        countryCode={location.countryCode}
+        class="location justify-end"
+      />
+    )
+  }
 </div>
 
 <style>
   h2 {
     @apply text-sm;
   }
-  .header {
-  }
-  .header.stuck {
-    border-bottom: 1px solid rgb(var(--color-button-muted));
-    span {
-      color: #ff0000;
+  @media (max-width: 640px) {
+    .positionCard {
+      text-align: left;
+    }
+    .location {
+      justify-content: flex-start;
     }
   }
 </style>
-
-<script>
-  const stickyElm = document.querySelector(".header")
-  const observer = new IntersectionObserver(
-    ([e]) => {
-      console.log("Activation", e)
-      e.target.classList.toggle("stuck", e.intersectionRatio < 1)
-    },
-    { threshold: [1] },
-  )
-
-  if (stickyElm !== null) {
-    observer.observe(stickyElm)
-  }
-</script>

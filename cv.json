@@ -7,7 +7,7 @@
     "url": "https://rickybok.com",
     "image": "/me_avatar.jpg",
     "summary": "Senior Typescript Engineer with 17+ years of front and back-end web development experience. I have expertise in leading multinational software development teams, designing, documenting, implementing, and delivering software solutions that span across platforms.",
-    "theme": "green",
+    "theme": "red",
     "location": {
       "address": "",
       "postalCode": "10001",
@@ -28,12 +28,16 @@
       }
     ]
   },
-  "work": [
+  "experience": [
     {
-      "name": "Privitar (Later acquired by Informatica)",
+      "name": "Privitar",
       "position": "Senior Frontend Engineer",
       "location_type": "Hybrid",
-      "location": "London, United Kingdom",
+      "location": {
+        "city": "London",
+        "countryCode": "UK",
+        "region": "United Kingdom"
+      },
       "url": "https://www.informatica.com/",
       "startDate": "2021-11-01",
       "endDate": "2023-12-01",
@@ -43,13 +47,25 @@
         "Mentoring members of the team to foster knowledge sharing and maintain high coding standards.",
         "Participated in code reviews and contributed to improving coding standards within the team."
       ],
-      "skills": ["React", "TypeScript", "Cypress", "GraphlQL", "GitHub"]
+      "skills": [
+        "React",
+        "TypeScript",
+        "Cypress",
+        "GraphlQL",
+        "GitHub",
+        "Flutter"
+      ],
+      "experience_type": "Employment"
     },
     {
       "name": "digi.me",
       "position": "Web Development Lead",
       "location_type": "On-site",
-      "location": "Surrey, United Kingdom",
+      "location": {
+        "city": "Surrey",
+        "countryCode": "UK",
+        "region": "United Kingdom"
+      },
       "url": "https://digi.me/",
       "startDate": "2015-10-01",
       "endDate": "2021-08-01",
@@ -60,28 +76,83 @@
         "Developed a Node.js SDK to help third parties utilise the digi.me private sharing platform. Used Typescript, and runtime type checking using io-ts",
         "Developed internal full stack web applications or engineering tools. Built on Next.JS or Express.JS frameworks, using Typescript, React, Xstate."
       ],
-      "skills": ["NextJS", "TypeScript", "React", "Redux", "Electron", "GitHub"]
+      "skills": [
+        "NextJS",
+        "TypeScript",
+        "React",
+        "Redux",
+        "Electron",
+        "GitHub"
+      ],
+      "experience_type": "Employment"
+    },
+    {
+      "name": "SmallWorlds",
+      "position": "Flex Developer",
+      "location_type": "On-site",
+      "location": {
+        "city": "Auckland",
+        "countryCode": "NZ",
+        "region": "New Zealand"
+      },
+      "url": "https://www.fujifilm.com/au/en/business/photofinishing/imagine",
+      "startDate": "2007-01-01",
+      "endDate": "2011-01-01",
+      "summary": "Worked on a cross platform digital imaging point of sales software which allowed users to design and create their own photobooks/canvas etc. online or on kiosks. I was involved in a major overhaul of the software that included using templates that instructed how elements are laid out on the fly.",
+      "responsibilities": [
+        "Led a development team of five to implement and deliver company products utilising both Waterfall and Agile software development methodologies.",
+        "Developed a desktop MacOS/Windows client to view user data. Built on Electron using Typescript, React, React-virtualized, Redux Saga, Styled Components, Jest.",
+        "Developed a Node.js SDK to help third parties utilise the digi.me private sharing platform. Used Typescript, and runtime type checking using io-ts",
+        "Developed internal full stack web applications or engineering tools. Built on Next.JS or Express.JS frameworks, using Typescript, React, Xstate."
+      ],
+      "skills": ["ActionScript", "Flex", "Adobe AIR"],
+      "experience_type": "Employment"
     },
     {
       "name": "Fujifilms",
       "position": "Flex Developer",
       "location_type": "On-site",
-      "location": "Sydney, Australia",
+      "location": {
+        "city": "Sydney",
+        "countryCode": "AU",
+        "region": "Australia"
+      },
+      "url": "https://www.fujifilm.com/au/en/business/photofinishing/imagine",
       "startDate": "2011-08-01",
       "endDate": "2015-07-01",
       "summary": "Worked on a cross platform digital imaging point of sales software which allowed users to design and create their own photobooks/canvas etc. online or on kiosks. I was involved in a major overhaul of the software that included using templates that instructed how elements are laid out on the fly.",
-      "skills": ["ActionScript", "Flex", "Adobe AIR"]
-    }
-  ],
-  "volunteer": [
+      "responsibilities": [
+        "Led a development team of five to implement and deliver company products utilising both Waterfall and Agile software development methodologies.",
+        "Developed a desktop MacOS/Windows client to view user data. Built on Electron using Typescript, React, React-virtualized, Redux Saga, Styled Components, Jest.",
+        "Developed a Node.js SDK to help third parties utilise the digi.me private sharing platform. Used Typescript, and runtime type checking using io-ts",
+        "Developed internal full stack web applications or engineering tools. Built on Next.JS or Express.JS frameworks, using Typescript, React, Xstate."
+      ],
+      "skills": ["ActionScript", "Flex", "Adobe AIR"],
+      "experience_type": "Employment"
+    },
     {
-      "organization": "Familia H Tours",
+      "name": "Familia H Tours",
       "position": "Video Editor",
       "url": "https://www.htoursmexico.com/",
       "startDate": "2024-09-01",
       "endDate": "2024-10-01",
       "summary": "Worked in a travel agency in Guadalajara, Mexico and helped with their social media presence and video editing.",
-      "location": "Guadalajara, Mexico"
+      "location": {
+        "city": "Guadalajara",
+        "countryCode": "MX",
+        "region": "Mexico"
+      },
+      "location_type": "On-site",
+      "experience_type": "Volunteer"
+    },
+    {
+      "name": "italki",
+      "position": "Language Tutor",
+      "url": "https://www.italki.com/es/teacher/4294132",
+      "startDate": "2020-01-01",
+      "summary": "I've been an online language tutor teaching students from all over the world. I've taught English, Cantonese, and Mandarin.",
+      "location_type": "online",
+      "experience_type": "Self-employment"
     }
   ],
   "education": [

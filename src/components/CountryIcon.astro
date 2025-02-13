@@ -1,0 +1,24 @@
+---
+import type { HTMLAttributes } from "astro/types"
+import AU from "@/icons/countries/au.astro"
+import MX from "@/icons/countries/mx.astro"
+import NZ from "@/icons/countries/nz.astro"
+import UK from "@/icons/countries/uk.astro"
+
+interface Props extends HTMLAttributes<"div"> {
+  countryCode: string
+}
+
+const { countryCode, class: className, ...rest } = Astro.props
+
+const COUNTRY_ICONS: Record<string, any> = { AU, MX, NZ, UK }
+const Icon = COUNTRY_ICONS[countryCode]
+---
+
+{
+  Icon && (
+    <div class:list={["[&>svg]:size-4", className]} {...rest}>
+      <Icon />
+    </div>
+  )
+}

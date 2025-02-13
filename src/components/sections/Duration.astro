@@ -1,0 +1,15 @@
+---
+import FormattedDate from "../FormattedDate.astro"
+
+interface Props {
+  startDate: string
+  endDate: string | null
+}
+
+const { startDate, endDate } = Astro.props
+---
+
+<div>
+  <FormattedDate date={startDate} /> -
+  {endDate != null ? <FormattedDate date={endDate} /> : "Present"}
+</div>

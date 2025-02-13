@@ -1,7 +1,6 @@
 export interface CV {
   basics: Basics;
-  work: Array<Work>;
-  volunteer: Array<Volunteer>;
+  experience: Array<Experience>;
   education: Array<Education>;
   awards: Array<Awards>;
   certificates: Array<Certificates>;
@@ -39,7 +38,7 @@ interface Profiles {
   url: string;
 }
 
-interface Work {
+interface Experience {
   name: string;
   position: string;
   url: string;
@@ -47,20 +46,10 @@ interface Work {
   endDate: DateStr | null;
   summary: string;
   highlights: Highlight;
+  experience_type: "employment" | "volunteer" | "internship";
 }
 
 type DateStr = `${string}-${string}-${string}`;
-
-interface Volunteer {
-  organization: string;
-  position: string;
-  url: string;
-  startDate: DateStr;
-  endDate: DateStr;
-  summary: string;
-  highlights: Highlight;
-  location: Location;
-}
 
 interface Skills {
   name: string;

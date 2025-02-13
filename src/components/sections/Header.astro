@@ -1,25 +1,33 @@
 ---
+import { basics } from "@cv"
+import ContactBar from "./ContactBar.astro"
+
 const { title } = Astro.props
+const { name, profiles, phone, email } = basics
 ---
 
-<div class="sticky top-0 mt-28 header">
-  <header class="flex flex-col max-w-4xl my-4">
-    {title && <h1>{title}.</h1>}
-    <slot />
-  </header>
-</div>
+<header class="sticky top-0 mt-28 header py-2">
+  {title && <h1>{title}.</h1>}
+  <ContactBar email={email} phone={phone} profiles={profiles} name={name} />
+  <slot />
+</header>
 
 <style>
   h1 {
     @apply text-5xl font-bold print:text-3xl;
   }
   .header {
+    display: flex;
+    flex-direction: column;
     background: rgb(var(--color-fill));
     z-index: 999;
     top: -1px;
   }
   .header.stuck {
     border-bottom: 1px solid rgb(var(--color-button-muted));
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     h1 {
       @apply text-2xl font-bold print:text-3xl;
     }
