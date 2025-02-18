@@ -1,43 +1,10 @@
 ---
 import Section from "../Section.astro"
-import PositionCard from "../PositionCard.astro"
 
 import { experience } from "@cv"
 
-import HTML from "@/icons/html.astro"
-import CSS from "@/icons/css.astro"
-import JavaScript from "@/icons/javascript.astro"
-import TypeScript from "@/icons/type.astro"
-import React from "@/icons/react.astro"
-import Node from "@/icons/node.astro"
-import MySQL from "@/icons/sql.astro"
-import Git from "@/icons/git.astro"
-import GitHub from "@/icons/GitHub.astro"
-import Tailwind from "@/icons/tailwind.astro"
-import Next from "@/icons/next.astro"
-import Swift from "@/icons/swift.astro"
-import SwiftUI from "@/icons/swiftui.astro"
-import Kotlin from "@/icons/kotlin.astro"
-import Flutter from "@/icons/flutter.astro"
 import ExperienceEntry from "./ExperienceEntry.astro"
-
-const SKILLS_ICONS: Record<string, any> = {
-  HTML,
-  CSS,
-  JavaScript,
-  TypeScript,
-  React,
-  Node,
-  MySQL,
-  Git,
-  GitHub,
-  Next,
-  Tailwind,
-  Swift,
-  SwiftUI,
-  Kotlin,
-  Flutter,
-}
+import { SECTION_IDS } from "../Constants"
 
 const sortByDate = (a: { startDate: string }, b: { startDate: string }) =>
   new Date(b.startDate) - new Date(a.startDate)
@@ -55,14 +22,18 @@ const others = experience
   .sort(sortByDate)
 ---
 
-<Section className={Astro.props.className} title="Employment">
+<Section
+  className={Astro.props.className}
+  title="Employment"
+  sectionId={SECTION_IDS.experience}
+>
   <ul class="flex flex-col">
-    {employment.map((position) => <ExperienceEntry employment={position} />)}
+    {employment.map((position) => <ExperienceEntry experience={position} />)}
   </ul>
 </Section>
 
 <Section className={Astro.props.className} title="Other Experience">
   <ul class="flex flex-col">
-    {others.map((position) => <ExperienceEntry employment={position} />)}
+    {others.map((position) => <ExperienceEntry experience={position} />)}
   </ul>
 </Section>

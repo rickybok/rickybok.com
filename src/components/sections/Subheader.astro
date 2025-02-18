@@ -1,0 +1,43 @@
+---
+import { SECTION_IDS } from "../Constants"
+import NavButton from "../NavButton.astro"
+---
+
+<header class="sticky top-14 mt-10 subHeader pt-2 pb-8 flex gap-4">
+  <NavButton link=`#${SECTION_IDS.skills}` title="Skills" />
+  <NavButton link=`#${SECTION_IDS.experience}` title="Experience" />
+  <NavButton link=`#${SECTION_IDS.education}` title="Education" />
+</header>
+
+<style>
+  h1 {
+    @apply text-5xl font-bold print:text-3xl;
+  }
+  .subHeader {
+    background: linear-gradient(
+      360deg,
+      rgba(var(--color-fill), 0) 0%,
+      rgba(var(--color-fill), 1) 40%
+    );
+    z-index: 1000;
+  }
+  .subHeader.stuck {
+  }
+</style>
+
+<script>
+  const initNavBehaviour = () => {
+    const navEl: HTMLElement = document.querySelector(".subHeader")!
+
+    const navStuckObserver = new IntersectionObserver(
+      ([{ intersectionRatio, target }]) => {
+        target.classList.toggle("stuck", intersectionRatio < 1)
+      },
+      { threshold: [1], rootMargin: "-60px 0px 0px 0px" },
+    )
+
+    navStuckObserver.observe(navEl)
+  }
+
+  initNavBehaviour()
+</script>

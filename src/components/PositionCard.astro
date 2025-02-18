@@ -8,24 +8,15 @@ interface Props {
   location_type: string
   company: string
   url: string | undefined
-  top: number
   startDate: string
   endDate: string | null
 }
 
-const {
-  top = 20,
-  position,
-  company,
-  url,
-  startDate,
-  endDate,
-  location,
-} = Astro.props
+const { position, company, url, startDate, endDate, location } = Astro.props
 ---
 
 <div
-  class=`sticky flex flex-col top-${top} positionCard text-right pr-4 gap-2 pb-4`
+  class="sticky flex flex-col top-32 positionCard text-right pr-4 gap-2 pb-4"
 >
   <div class="flex flex-col">
     <h2 class="font-semibold">{position}</h2>
@@ -62,7 +53,7 @@ const {
 
 <style>
   h2 {
-    @apply text-sm;
+    @apply text-base;
   }
   @media (max-width: 640px) {
     .positionCard {

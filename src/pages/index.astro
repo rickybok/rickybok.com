@@ -5,29 +5,26 @@ import Education from "@/components/sections/Education.astro"
 import Experience from "@/components/sections/Experience.astro"
 import Header from "@/components/sections/Header.astro"
 import Hero from "@/components/sections/Hero.astro"
-import Projects from "@/components/sections/Projects.astro"
 import Skills from "@/components/sections/Skills.astro"
 import Tail from "@/components/sections/Tail.astro"
-import KeyboardManager from "@/components/KeyboardManager.astro"
 import ThemeSwitch from "@/components/ThemeSwitch.astro"
 
 import { basics } from "@cv"
+import Subheader from "@/components/sections/Subheader.astro"
 const { name, label } = basics
 ---
 
-<Layout title={`${name} Portafolio - ${label}`}>
-  <main class="relative flex flex-col max-w-4xl gap-8 px-4">
+<Layout title={`${name} Portafolio - ${label} scroll-smooth`}>
+  <main class="relative flex flex-col max-w-4xl gap-12 px-4 scroll-smooth">
     <Header title={name} />
     <Hero />
-    <Skills className="print:hidden" />
-    <Experience className="print:col-span-3" />
-    <Projects className="print:hidden" />
+    <Subheader title={name} />
+    <Skills />
+    <Experience />
     <Education />
     <Tail />
     <ThemeSwitch />
   </main>
-
-  <KeyboardManager />
 </Layout>
 
 <style>
@@ -38,5 +35,7 @@ const { name, label } = basics
   main {
     margin: auto;
     width: 100%;
+  }
+  html {
   }
 </style>

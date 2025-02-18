@@ -19,7 +19,6 @@ const { name, profiles, phone, email } = basics
   .header {
     display: flex;
     flex-direction: column;
-    background: rgb(var(--color-fill));
     z-index: 999;
     top: -1px;
   }
@@ -28,6 +27,7 @@ const { name, profiles, phone, email } = basics
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    background: rgb(var(--color-fill), 1);
     h1 {
       @apply text-2xl font-bold print:text-3xl;
     }
@@ -40,11 +40,10 @@ const { name, profiles, phone, email } = basics
     ([e]) => {
       e.target.classList.toggle("stuck", e.intersectionRatio < 1)
     },
-    { threshold: [1] },
+    { threshold: [1], rootMargin: "0px 0px 0px 0px" },
   )
 
   if (stickyElm !== null) {
-    console.log("observing")
     observer.observe(stickyElm)
   }
 </script>

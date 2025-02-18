@@ -19,6 +19,8 @@ const { image, summary, url, theme } = basics
     <meta name="description" content={summary} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="preload" as="image" href={image} />
 
     <meta property="og:url" content={url} />
@@ -37,7 +39,7 @@ const { image, summary, url, theme } = basics
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
 
@@ -58,7 +60,7 @@ const { image, summary, url, theme } = basics
         margin: 0;
         padding: 0;
         font-family:
-          "Red Hat Text",
+          "Roboto",
           system-ui,
           -apple-system,
           BlinkMacSystemFont,
@@ -113,24 +115,6 @@ const { image, summary, url, theme } = basics
       }
       #hotkeypad [data-backdrop] {
         @apply !bg-zinc-800 !opacity-80;
-      }
-
-      @media print {
-        .no-print {
-          display: none !important;
-        }
-
-        .print {
-          display: block !important;
-        }
-
-        astro-dev-toolbar {
-          display: none !important;
-        }
-
-        article {
-          break-inside: avoid;
-        }
       }
     </style>
   </body>

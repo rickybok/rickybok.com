@@ -1,0 +1,13 @@
+---
+interface Props {
+  title: string
+  link: string
+}
+
+const { link, title } = Astro.props
+---
+
+<a
+  class="font-semibold text-lg text-skin-muted hover:text-skin-base cursor-pointer"
+  href={link}>{title}</a
+>
