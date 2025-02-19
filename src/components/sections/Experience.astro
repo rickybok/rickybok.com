@@ -9,31 +9,15 @@ import { SECTION_IDS } from "../Constants"
 const sortByDate = (a: { startDate: string }, b: { startDate: string }) =>
   new Date(b.startDate) - new Date(a.startDate)
 
-const employment = experience
-  .filter(
-    ({ experience_type }) => experience_type.toLowerCase() === "employment",
-  )
-  .sort(sortByDate)
-
-const others = experience
-  .filter(
-    ({ experience_type }) => experience_type.toLowerCase() !== "employment",
-  )
-  .sort(sortByDate)
+const employment = experience.sort(sortByDate)
 ---
 
 <Section
   className={Astro.props.className}
-  title="Employment"
+  title="Experience"
   sectionId={SECTION_IDS.experience}
 >
   <ul class="flex flex-col">
     {employment.map((position) => <ExperienceEntry experience={position} />)}
-  </ul>
-</Section>
-
-<Section className={Astro.props.className} title="Other Experience">
-  <ul class="flex flex-col">
-    {others.map((position) => <ExperienceEntry experience={position} />)}
   </ul>
 </Section>

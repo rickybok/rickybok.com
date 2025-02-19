@@ -8,6 +8,41 @@ const { link, title } = Astro.props
 ---
 
 <a
-  class="font-semibold text-lg text-skin-muted hover:text-skin-base cursor-pointer"
-  href={link}>{title}</a
->
+  class="font-semibold subNav transition display-block text-lg pt-2 px-4 text-skin-muted hover:text-skin-base cursor-pointer"
+  id={`nav-${link.toLowerCase()}`}
+  href={`#${link}`}
+  >{title}
+</a>
+
+<style>
+  .subNav {
+    border-top: 2px solid rgba(var(--color-text-base), 0%);
+    animation: border-fade-out 0.5s ease-out;
+  }
+
+  .subNav.is-active {
+    border-top: 2px solid rgba(var(--color-text-base), 100%);
+    animation: border-fade-in 0.5s ease-out;
+    color: rgba(var(--color-text-base), 100%);
+  }
+
+  @keyframes border-fade-in {
+    0% {
+      border-top: 2px solid rgba(var(--color-text-base), 0%);
+    }
+
+    100% {
+      border-top: 2px solid rgba(var(--color-text-base), 100%);
+    }
+  }
+
+  @keyframes border-fade-out {
+    100% {
+      border-top: 2px solid rgba(var(--color-text-base), 0%);
+    }
+
+    0% {
+      border-top: 2px solid rgba(var(--color-text-base), 100%);
+    }
+  }
+</style>

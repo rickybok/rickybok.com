@@ -1,10 +1,12 @@
 ---
 const { className, title, sectionId } = Astro.props
-
-console.log(sectionId)
 ---
 
-<section class:list={["flex flex-col gap-4", className]} id={sectionId}>
+<section
+  id={`container-${sectionId}`}
+  class:list={["flex flex-col gap-4 pt-8", className]}
+>
+  {sectionId && <a class="anchor" id={sectionId} />}
   {
     title && (
       <h3 class="relative flex w-full items-center gap-3 pb-4 text-3xl">
@@ -14,3 +16,12 @@ console.log(sectionId)
   }
   <slot />
 </section>
+
+<style>
+  .anchor {
+    display: block;
+    position: relative;
+    top: -6em;
+    visibility: hidden;
+  }
+</style>

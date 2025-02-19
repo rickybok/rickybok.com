@@ -98,12 +98,11 @@
       "url": "https://www.fujifilm.com/au/en/business/photofinishing/imagine",
       "startDate": "2007-01-01",
       "endDate": "2011-01-01",
-      "summary": "Worked on a cross platform digital imaging point of sales software which allowed users to design and create their own photobooks/canvas etc. online or on kiosks. I was involved in a major overhaul of the software that included using templates that instructed how elements are laid out on the fly.",
+      "summary": "I was involved in creating and maintaining the online virtual world SmallWorlds, which had over a million registered users in its hayday. It was built using Adobe Flex with a Java backend.",
       "responsibilities": [
-        "Led a development team of five to implement and deliver company products utilising both Waterfall and Agile software development methodologies.",
-        "Developed a desktop MacOS/Windows client to view user data. Built on Electron using Typescript, React, React-virtualized, Redux Saga, Styled Components, Jest.",
-        "Developed a Node.js SDK to help third parties utilise the digi.me private sharing platform. Used Typescript, and runtime type checking using io-ts",
-        "Developed internal full stack web applications or engineering tools. Built on Next.JS or Express.JS frameworks, using Typescript, React, Xstate."
+        "Developing Flash widgets used in the virtual world which connected to social networks such as Twitter, Youtube and Soundcloud.",
+        "Developing and maintaining features for the core platform such as avatar creation and online shopping.",
+        "Developing web content for their online newsletter and blog."
       ],
       "skills": ["ActionScript", "Flex", "Adobe AIR"],
       "experience_type": "Employment"
@@ -147,7 +146,7 @@
         "countryCode": "MX",
         "region": "Mexico"
       },
-      "skills": ["Capcut"],
+      "skills": ["Capcut", "Canva"],
       "location_type": "On-site",
       "experience_type": "Volunteer"
     },
@@ -170,7 +169,7 @@
     {
       "institution": "University Of Auckland",
       "url": "https://www.auckland.ac.nz/en.html",
-      "area": "Software Engineering (BE)",
+      "area": "Software Engineering",
       "studyType": "Bachelor",
       "startDate": "2002-01-01",
       "endDate": "2005-12-01",
@@ -180,7 +179,9 @@
         "countryCode": "NZ",
         "region": "New Zealand"
       },
-      "summary": "I graduated with a First Class Honours in Software Engineering and over my four years in the university I've achieved an average of A- grades over all the courses I've taken."
+      "summary": "I graduated with a Bachelor of Engineering (BE) degree and over my four years in the university I've achieved an average of A- grades over all the courses I've taken. It was here where I learnt a lot of the fundamental concepts of software development and the professional conduct of being an engineer.",
+      "achievements": ["First Class Honours in Software Engineering."],
+      "skills": ["Java", "C#"]
     },
     {
       "institution": "Media Design School",
@@ -194,8 +195,9 @@
         "countryCode": "NZ",
         "region": "New Zealand"
       },
-      "summary": "After graduating my BE degree, I decided to pursue my passion of web design and development by studying a one year diploma of digital media design.",
-      "skills": ["HTML", "CSS", "Adobe Flash", "Photoshop", "Javascript"]
+      "summary": "After graduating my BE degree, I decided to pursue my passion of web design and development by studying a one year diploma of Digital Media Design where I had the opportunity to build and design many different media for the web. I was also introduced to Adobe Flash and this launched me into different roles in the first ten years of my professional career.",
+      "skills": ["HTML", "CSS", "Adobe Flash", "Photoshop", "Javascript"],
+      "achievements": ["Highly Commended in Technical Aptitude."]
     }
   ],
   "certificates": [],

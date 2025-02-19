@@ -14,8 +14,8 @@ import Subheader from "@/components/sections/Subheader.astro"
 const { name, label } = basics
 ---
 
-<Layout title={`${name} Portafolio - ${label} scroll-smooth`}>
-  <main class="relative flex flex-col max-w-4xl gap-12 px-4 scroll-smooth">
+<Layout title={`${name} Portafolio - ${label}`}>
+  <main class="relative flex flex-col max-w-4xl gap-12 px-4">
     <Header title={name} />
     <Hero />
     <Subheader title={name} />
@@ -37,5 +37,39 @@ const { name, label } = basics
     width: 100%;
   }
   html {
+    scroll-behavior: smooth;
   }
 </style>
+
+<script>
+  const initNavHighlightBehaviour = () => {
+    const highlightNav = (entries) => {
+      entries.forEach((entry) => {
+        const navId = "#nav-" + entry.target.id.replace("container-", "")
+        const navItem = document.querySelector(navId)
+        if (!navItem) return
+
+        if (entry.isIntersecting) {
+          navItem.classList.add("is-active")
+        } else {
+          navItem.classList.remove("is-active")
+        }
+      })
+    }
+
+    const observer = new IntersectionObserver(highlightNav, {
+      threshold: [0.2],
+    })
+    const sections: NodeListOf<HTMLElement> =
+      document.querySelectorAll(".anchor")
+
+    sections.forEach((element) => {
+      const section = document.querySelector(`#container-${element.id}`)
+      if (!section) return
+
+      observer.observe(section)
+    })
+  }
+
+  initNavHighlightBehaviour()
+</script>

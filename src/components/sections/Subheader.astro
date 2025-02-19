@@ -3,10 +3,10 @@ import { SECTION_IDS } from "../Constants"
 import NavButton from "../NavButton.astro"
 ---
 
-<header class="sticky top-14 mt-10 subHeader pt-2 pb-8 flex gap-4">
-  <NavButton link=`#${SECTION_IDS.skills}` title="Skills" />
-  <NavButton link=`#${SECTION_IDS.experience}` title="Experience" />
-  <NavButton link=`#${SECTION_IDS.education}` title="Education" />
+<header class="sticky top-14 mt-10 subHeader pt-0 pb-8 flex">
+  <NavButton link=`${SECTION_IDS.skills}` title="Skills" />
+  <NavButton link=`${SECTION_IDS.experience}` title="Experience" />
+  <NavButton link=`${SECTION_IDS.education}` title="Education" />
 </header>
 
 <style>

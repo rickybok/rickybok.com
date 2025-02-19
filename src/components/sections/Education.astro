@@ -4,7 +4,6 @@ import Section from "../Section.astro"
 import { education } from "@cv"
 import { SECTION_IDS } from "../Constants"
 import ExperienceEntry from "./ExperienceEntry.astro"
-import Technology from "./Technology.astro"
 ---
 
 <Section
@@ -26,6 +25,7 @@ import Technology from "./Technology.astro"
               location: education.location,
               summary: education.summary,
               skills: education.skills,
+              achievements: education.achievements,
             }}
           />
         )
