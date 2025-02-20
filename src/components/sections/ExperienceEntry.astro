@@ -6,14 +6,14 @@ interface Props {
   experience: {
     name: string
     startDate: string
-    endDate: string
+    endDate?: string
     position: string
     summary?: string
     responsibilities?: string[]
     achievements?: string[]
     url?: string
     skills?: string[]
-    location: { city: string; region?: string; countryCode?: string }
+    location?: { city: string; region?: string; countryCode?: string }
     location_type?: string
   }
 }

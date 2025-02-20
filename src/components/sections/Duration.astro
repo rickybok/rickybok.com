@@ -3,7 +3,7 @@ import FormattedDate from "../FormattedDate.astro"
 
 interface Props {
   startDate: string
-  endDate: string | null
+  endDate?: string
 }
 
 const { startDate, endDate } = Astro.props

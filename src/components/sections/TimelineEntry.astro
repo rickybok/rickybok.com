@@ -5,11 +5,11 @@ interface Props {
   entry: {
     institution: string
     startDate: string
-    endDate: string
+    endDate?: string
     title: string
     url?: string
-    location: { city: string; region?: string; countryCode?: string }
-    location_type: string
+    location?: { city: string; region?: string; countryCode?: string }
+    location_type?: string
   }
 }
 
@@ -17,11 +17,13 @@ const { institution, startDate, endDate, title, url, location, location_type } =
   Astro.props.entry
 ---
 
-<li class="relative pt-3 pb-16">
+<li class="relative pt-3 pb-16 h-full">
+  <div class="absolute -left-4 sm:left-1/4 top-6 bottom-20 w-px bg-skin-muted">
+  </div>
   <div
-    class="group relative grid pb-1 print:pb-0 transition-all print:grid-cols-1 print:gap-1 sm:grid-cols-12 sm:gap-8 md:gap-6 lg:hover:!opacity-100"
+    class="relative flex flex-col sm:flex-row pb-1 transition-all sm:gap-8 lg:hover:!opacity-100"
   >
-    <div class="relative mt-1 text-xs sm:col-span-3">
+    <div class="relative mt-1 text-xs sm:w-1/4">
       <PositionCard
         position={title}
         location={location}
@@ -32,15 +34,9 @@ const { institution, startDate, endDate, title, url, location, location_type } =
         endDate={endDate}
       />
     </div>
-    <div
-      class="relative flex flex-col before:-ml-5 sm:col-span-9 before:w-px before:absolute before:bg-skin-muted before:top-4 before:bottom-4"
-    >
+    <div class="relative flex-2 flex-col sm:w-3/4">
       <div
-        class="absolute w-2 h-2 bg-white rounded-full mt-2 -translate-x-[1.5rem] translate-y-[0.2rem]"
-      >
-      </div>
-      <div
-        class="absolute bottom-2 w-2 h-2 bg-skin-muted rounded-full -translate-x-[1.5rem]"
+        class="absolute bottom-2 w-2 h-2 bg-skin-muted rounded-full -left-5 sm:-left-7"
       >
       </div>
       <div class="flex flex-col gap-4">
@@ -71,17 +67,18 @@ const { institution, startDate, endDate, title, url, location, location_type } =
       </div>
     </div>
   </div>
+
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"
+  ></script>
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <style>
+    li::marker {
+      @apply text-skin-hue;
+    }
+  </style>
 </li>
-
-<script
-  defer
-  src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"
-></script>
-<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
-></script>
-
-<style>
-  li::marker {
-    @apply text-skin-hue;
-  }
-</style>

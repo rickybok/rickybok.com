@@ -6,10 +6,10 @@ import { experience } from "@cv"
 import ExperienceEntry from "./ExperienceEntry.astro"
 import { SECTION_IDS } from "../Constants"
 
-const sortByDate = (a: { startDate: string }, b: { startDate: string }) =>
-  new Date(b.startDate) - new Date(a.startDate)
-
-const employment = experience.sort(sortByDate)
+const employment = experience.sort(
+  (a: { startDate: string }, b: { startDate: string }) =>
+    new Date(b.startDate).getTime() - new Date(a.startDate).getTime(),
+)
 ---
 
 <Section

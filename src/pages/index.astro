@@ -14,8 +14,8 @@ import Subheader from "@/components/sections/Subheader.astro"
 const { name, label } = basics
 ---
 
-<Layout title={`${name} Portafolio - ${label}`}>
-  <main class="relative flex flex-col max-w-4xl gap-12 px-4">
+<Layout title={`${name} Portfolio - ${label}`}>
+  <main class="relative flex flex-col max-w-4xl gap-12 px-8">
     <Header title={name} />
     <Hero />
     <Subheader title={name} />
@@ -43,23 +43,21 @@ const { name, label } = basics
 
 <script>
   const initNavHighlightBehaviour = () => {
-    const highlightNav = (entries) => {
-      entries.forEach((entry) => {
-        const navId = "#nav-" + entry.target.id.replace("container-", "")
+    const observer = new IntersectionObserver(
+      ([{ isIntersecting, target }]) => {
+        const navId = "#nav-" + target.id.replace("container-", "")
         const navItem = document.querySelector(navId)
         if (!navItem) return
 
-        if (entry.isIntersecting) {
+        if (isIntersecting) {
           navItem.classList.add("is-active")
         } else {
           navItem.classList.remove("is-active")
         }
-      })
-    }
+      },
+      { threshold: [0.1] },
+    )
 
-    const observer = new IntersectionObserver(highlightNav, {
-      threshold: [0.2],
-    })
     const sections: NodeListOf<HTMLElement> =
       document.querySelectorAll(".anchor")
 

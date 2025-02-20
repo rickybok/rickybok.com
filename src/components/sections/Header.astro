@@ -7,7 +7,7 @@ const { name, profiles, phone, email } = basics
 ---
 
 <header class="sticky top-0 mt-28 header py-2">
-  {title && <h1>{title}.</h1>}
+  {title && <h1 class="transition duration-300 ease-in-out">{title}.</h1>}
   <ContactBar email={email} phone={phone} profiles={profiles} name={name} />
   <slot />
 </header>
@@ -21,15 +21,39 @@ const { name, profiles, phone, email } = basics
     flex-direction: column;
     z-index: 999;
     top: -1px;
+    border-bottom: 1px solid rgb(var(--color-button-muted), 0%);
+    animation: header-unstuck 0.5s ease-out;
   }
   .header.stuck {
     border-bottom: 1px solid rgb(var(--color-button-muted));
+    animation: header-stuck 0.5s ease-out;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background: rgb(var(--color-fill), 1);
+
     h1 {
-      @apply text-2xl font-bold print:text-3xl;
+      @apply text-2xl;
+    }
+  }
+
+  @keyframes header-stuck {
+    100% {
+      border-bottom: 1px solid rgb(var(--color-button-muted), 100%);
+    }
+
+    0% {
+      border-bottom: 1px solid rgb(var(--color-button-muted), 0%);
+    }
+  }
+
+  @keyframes header-unstuck {
+    100% {
+      border-bottom: 1px solid rgb(var(--color-button-muted), 0%);
+    }
+
+    0% {
+      border-bottom: 1px solid rgb(var(--color-button-muted), 100%);
     }
   }
 </style>

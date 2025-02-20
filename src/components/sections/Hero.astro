@@ -1,17 +1,14 @@
 ---
 import { basics } from "@cv"
 import Section from "@/components/Section.astro"
-import Location from "./Location.astro"
 
-const { summary, location } = basics
-const { city, region, countryCode } = location
+const { summary } = basics
 ---
 
 <Section>
   <div class="flex flex-col-reverse gap-8">
     <div class="info pt-2">
       <h2>{summary}</h2>
-      <Location city={city} region={region} countryCode={countryCode} />
     </div>
   </div>
 </Section>
@@ -66,16 +63,6 @@ const { city, region, countryCode } = location
   const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
     ? "dark"
     : "light"
-
-  // const el = document.querySelector(".myElement")
-  // const observer = new IntersectionObserver(
-  // 	([e]) => e.target.classList.toggle("is-pinned", e.intersectionRatio < 1),
-  // 	{ threshold: [1] }
-  // );
-
-  // if (el !== null) {
-  // 	observer.observe(el);
-  // }
 
   if (theme !== null) {
     select.value = theme

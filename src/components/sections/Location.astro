@@ -13,7 +13,7 @@ const { city, region, class: className, countryCode, ...rest } = Astro.props
 ---
 
 <div
-  class:list={["flex items-center gap-2 pt-2 text-skin-muted", className]}
+  class:list={["flex items-center gap-2 text-skin-muted", className]}
   {...rest}
 >
   {countryCode ? <CountryIcon countryCode={countryCode} /> : <WorldMap />}
