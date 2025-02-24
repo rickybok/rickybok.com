@@ -7,6 +7,7 @@ import NavButton from "../NavButton.astro"
   <NavButton link=`${SECTION_IDS.skills}` title="Skills" />
   <NavButton link=`${SECTION_IDS.experience}` title="Experience" />
   <NavButton link=`${SECTION_IDS.education}` title="Education" />
+  <NavButton link=`${SECTION_IDS.about}` title="About" />
 </header>
 
 <style>
@@ -14,12 +15,13 @@ import NavButton from "../NavButton.astro"
     @apply text-5xl font-bold print:text-3xl;
   }
   .subHeader {
+    border-top: 1px solid rgba(var(--color-text-muted), 40%);
     background: linear-gradient(
       360deg,
       rgba(var(--color-fill), 0) 0%,
       rgba(var(--color-fill), 1) 40%
     );
-    z-index: 1000;
+    z-index: 100;
   }
   .subHeader.stuck {
   }
@@ -28,9 +30,14 @@ import NavButton from "../NavButton.astro"
 <script>
   const initNavBehaviour = () => {
     const navEl: HTMLElement = document.querySelector(".subHeader")!
+    const header: HTMLElement = document.querySelector(".header")!
 
     const navStuckObserver = new IntersectionObserver(
       ([{ intersectionRatio, target }]) => {
+        if (header) {
+          header.classList.toggle("show", intersectionRatio < 1)
+        }
+
         target.classList.toggle("stuck", intersectionRatio < 1)
       },
       { threshold: [1], rootMargin: "-60px 0px 0px 0px" },

@@ -6,8 +6,8 @@
     "phone": "+64 2041837005",
     "url": "https://rickybok.com",
     "image": "/me_avatar.jpg",
-    "summary": "Senior Typescript Engineer with 17+ years of front and back-end web development experience. I have expertise in leading multinational software development teams, designing, documenting, implementing, and delivering software solutions that span across platforms.",
-    "theme": "red",
+    "summary": "Senior Front End Engineer with expertise in leading multinational software development teams, designing, documenting, implementing, and delivering software solutions that span across platforms.",
+    "theme": "blue",
     "location": {
       "address": "",
       "postalCode": "10001",
@@ -28,9 +28,18 @@
       }
     ]
   },
+  "about": [
+    "Hi I'm Ricky.",
+    "I've always had a strong interest in web development and UX, hence after my bachelor of software engineering degree, I did a diploma of digital media design where I could focus more on the design and user interface aspect of web. I started my career as an Adobe Flash Developer and eventually moved on to Javascript and Typescript with a focus on front end development.",
+    "Throughout my career I've led teams, been involved with system design and managed projects across teams to ensure on time delivery. ",
+    "Even though I grew up in Auckland, New Zealand, I moved abroad and worked and lived in Australia and the UK.",
+    "Outside of web development I'm also an avid language learner, learning in my spare time and eventually tutoring students part time through out the pandemic.",
+    "I decided to take a career break in 2024 to pursue my dream of traveling and immersing myself in Spanish speaking environments. I walked the Camino de Santiago in Spain and traveled around Latin America, with a couple of volunteering stints in Mexico.",
+    "I returned to New Zealand in 2025 to pursue new opportunities here."
+  ],
   "experience": [
     {
-      "name": "Privitar",
+      "name": "Privitar/Informatica",
       "position": "Senior Frontend Engineer",
       "location_type": "Hybrid",
       "location": {
@@ -47,14 +56,7 @@
         "Mentoring members of the team to foster knowledge sharing and maintain high coding standards.",
         "Participated in code reviews and contributed to improving coding standards within the team."
       ],
-      "skills": [
-        "React",
-        "TypeScript",
-        "Cypress",
-        "GraphlQL",
-        "GitHub",
-        "Flutter"
-      ],
+      "skills": ["React", "TypeScript", "Cypress", "GraphlQL", "GitHub"],
       "experience_type": "Employment"
     },
     {
@@ -76,14 +78,7 @@
         "Developed a Node.js SDK to help third parties utilise the digi.me private sharing platform. Used Typescript, and runtime type checking using io-ts",
         "Developed internal full stack web applications or engineering tools. Built on Next.JS or Express.JS frameworks, using Typescript, React, Xstate."
       ],
-      "skills": [
-        "NextJS",
-        "TypeScript",
-        "React",
-        "Redux",
-        "Electron",
-        "GitHub"
-      ],
+      "skills": ["Next", "TypeScript", "React", "Redux", "Electron", "GitHub"],
       "experience_type": "Employment"
     },
     {
@@ -104,7 +99,7 @@
         "Developing and maintaining features for the core platform such as avatar creation and online shopping.",
         "Developing web content for their online newsletter and blog."
       ],
-      "skills": ["ActionScript", "Flex", "Adobe AIR"],
+      "skills": ["ActionScript", "Flash", "Adobe AIR"],
       "experience_type": "Employment"
     },
     {
@@ -196,7 +191,7 @@
         "region": "New Zealand"
       },
       "summary": "After graduating my BE degree, I decided to pursue my passion of web design and development by studying a one year diploma of Digital Media Design where I had the opportunity to build and design many different media for the web. I was also introduced to Adobe Flash and this launched me into different roles in the first ten years of my professional career.",
-      "skills": ["HTML", "CSS", "Adobe Flash", "Photoshop", "Javascript"],
+      "skills": ["HTML", "CSS", "Flash", "Photoshop", "JavaScript"],
       "achievements": ["Highly Commended in Technical Aptitude."]
     }
   ],
@@ -281,10 +276,10 @@
     }
   ],
   "languages": [
-    { "language": "English", "fluency": "Native speaker" },
-    { "language": "Cantonese", "fluency": "Native speaker" },
-    { "language": "Mandarin", "fluency": "Native speaker" },
-    { "language": "Spanish", "fluency": "Intermediate" }
+    { "language": "English", "fluency": "C2" },
+    { "language": "Cantonese", "fluency": "C2" },
+    { "language": "Mandarin", "fluency": "C2" },
+    { "language": "Spanish", "fluency": "B2" }
   ],
   "interests": [],
   "references": [],

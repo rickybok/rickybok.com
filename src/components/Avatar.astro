@@ -1,0 +1,24 @@
+---
+import type { HTMLAttributes } from "astro/types"
+
+interface Props extends HTMLAttributes<"div"> {
+  image: string
+  name: string
+}
+
+const { image, name, class: className, ...attrs } = Astro.props
+---
+
+<div
+  class:list={[
+    "ackground-position-center background-repeat-no-repeat rounded-full w-full",
+    className,
+  ]}
+  {...attrs}
+>
+  <img
+    class="shadow-lg shadow-skin-hues rounded-full border-4 border-text-skin-base h-auto w-auto max-w-32 object-cover block aspect-square"
+    src={image}
+    alt={name}
+  />
+</div>

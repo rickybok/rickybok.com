@@ -6,68 +6,56 @@ const { title } = Astro.props
 const { name, profiles, phone, email } = basics
 ---
 
-<header class="sticky top-0 mt-28 header py-2">
-  {title && <h1 class="transition duration-300 ease-in-out">{title}.</h1>}
-  <ContactBar email={email} phone={phone} profiles={profiles} name={name} />
-  <slot />
+<header class="fixed flex header top-0 py-2 left-0 right-0 justify-center">
+  <div
+    class="flex flex-row justify-between items-baseline max-w-5xl w-full px-8"
+  >
+    {name && <h1 class="transition duration-300 ease-in-out">{title}.</h1>}
+    <ContactBar email={email} phone={phone} profiles={profiles} name={name} />
+    <slot />
+  </div>
 </header>
 
 <style>
   h1 {
-    @apply text-5xl font-bold print:text-3xl;
+    @apply text-xl font-bold;
   }
   .header {
-    display: flex;
-    flex-direction: column;
-    z-index: 999;
-    top: -1px;
     border-bottom: 1px solid rgb(var(--color-button-muted), 0%);
-    animation: header-unstuck 0.5s ease-out;
+    animation: header-hide 0.5s ease-out;
+    display: none;
   }
-  .header.stuck {
-    border-bottom: 1px solid rgb(var(--color-button-muted));
-    animation: header-stuck 0.5s ease-out;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background: rgb(var(--color-fill), 1);
-
-    h1 {
-      @apply text-2xl;
-    }
+  .header.show {
+    display: flex;
+    animation: header-show 0.5s ease-out;
+    border-bottom: 1px solid rgb(var(--color-button-muted), 100%);
+    background: rgba(var(--color-fill), 100%);
+    z-index: 999;
   }
 
-  @keyframes header-stuck {
+  @keyframes header-show {
     100% {
       border-bottom: 1px solid rgb(var(--color-button-muted), 100%);
+      opacity: 1;
     }
 
     0% {
       border-bottom: 1px solid rgb(var(--color-button-muted), 0%);
+      opacity: 0;
     }
   }
 
-  @keyframes header-unstuck {
+  @keyframes header-hide {
     100% {
       border-bottom: 1px solid rgb(var(--color-button-muted), 0%);
+      opacity: 0;
+      display: none;
     }
 
     0% {
       border-bottom: 1px solid rgb(var(--color-button-muted), 100%);
+      opacity: 1;
+      display: flex;
     }
   }
 </style>
-
-<script>
-  const stickyElm = document.querySelector(".header")
-  const observer = new IntersectionObserver(
-    ([e]) => {
-      e.target.classList.toggle("stuck", e.intersectionRatio < 1)
-    },
-    { threshold: [1], rootMargin: "0px 0px 0px 0px" },
-  )
-
-  if (stickyElm !== null) {
-    observer.observe(stickyElm)
-  }
-</script>

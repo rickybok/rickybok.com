@@ -1,5 +1,6 @@
 ---
 import FormattedDate from "../FormattedDate.astro"
+import { getFormattedDuration } from "../../FormatDuration"
 
 interface Props {
   startDate: string
@@ -7,9 +8,17 @@ interface Props {
 }
 
 const { startDate, endDate } = Astro.props
+
+const duration = getFormattedDuration(
+  new Date(startDate),
+  endDate ? new Date(endDate) : new Date(),
+)
 ---
 
-<div>
-  <FormattedDate date={startDate} /> -
-  {endDate != null ? <FormattedDate date={endDate} /> : "Present"}
+<div class="flex sm:flex-col flex-row gap-1">
+  <span>
+    <FormattedDate date={startDate} /> -
+    {endDate != null ? <FormattedDate date={endDate} /> : "Present"}
+  </span>
+  {`(${duration})`}
 </div>

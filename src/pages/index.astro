@@ -11,17 +11,19 @@ import ThemeSwitch from "@/components/ThemeSwitch.astro"
 
 import { basics } from "@cv"
 import Subheader from "@/components/sections/Subheader.astro"
+import About from "@/components/sections/About.astro"
 const { name, label } = basics
 ---
 
 <Layout title={`${name} Portfolio - ${label}`}>
-  <main class="relative flex flex-col max-w-4xl gap-12 px-8">
+  <main class="relative flex flex-col max-w-5xl gap-12 px-8">
     <Header title={name} />
     <Hero />
     <Subheader title={name} />
     <Skills />
     <Experience />
     <Education />
+    <About />
     <Tail />
     <ThemeSwitch />
   </main>

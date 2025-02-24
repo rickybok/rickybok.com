@@ -14,6 +14,16 @@ import Swift from "@/icons/swift.astro"
 import SwiftUI from "@/icons/swiftui.astro"
 import Kotlin from "@/icons/kotlin.astro"
 import Flutter from "@/icons/flutter.astro"
+import Cypress from "@/icons/cypress.astro"
+import GraphlQL from "@/icons/graphql.astro"
+import Electron from "@/icons/electron.astro"
+import ActionScript from "@/icons/actionscript.astro"
+import Flash from "@/icons/flash.astro"
+import Flex from "@/icons/flash.astro"
+import Capcut from "@/icons/capcut.astro"
+import Photoshop from "@/icons/photoshop.astro"
+import Canva from "@/icons/canva.astro"
+import Pill from "../Pill.astro"
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const SKILLS_ICONS: Record<string, any> = {
@@ -32,6 +42,15 @@ const SKILLS_ICONS: Record<string, any> = {
   SwiftUI,
   Kotlin,
   Flutter,
+  Cypress,
+  GraphlQL,
+  Electron,
+  ActionScript,
+  Flash,
+  Flex,
+  Capcut,
+  Canva,
+  Photoshop,
 }
 
 interface Props {
@@ -47,11 +66,7 @@ const technologies = Astro.props.technologies
       technologies.map((skill) => {
         const iconName = skill === "Next.js" ? "Next" : skill
         const Icon = SKILLS_ICONS[iconName]
-        return (
-          <li class="bg-skin-button-accent/20 border-skin-hue/20 text-skin-hue print:p-0 print:bg-transparent print:text-zinc-800 flex gap-1 items-center border-solid print:border-none border rounded-md px-2 py-0.5 text-xs">
-            {Icon && <Icon />} <span>{skill}</span>
-          </li>
-        )
+        return <Pill label={skill}>{Icon && <Icon />}</Pill>
       })
   }
 </ul>

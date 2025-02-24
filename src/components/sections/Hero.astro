@@ -1,23 +1,22 @@
 ---
 import { basics } from "@cv"
 import Section from "@/components/Section.astro"
+import ContactBar from "./ContactBar.astro"
 
-const { summary } = basics
+const { summary, name, email, phone, profiles } = basics
 ---
 
 <Section>
-  <div class="flex flex-col-reverse gap-8">
-    <div class="info pt-2">
+  <div class="flex flex-col gap-4 mt-12">
+    {name && <h1 class="transition duration-300 ease-in-out pb-4">{name}.</h1>}
+    <div class="flex flex-col gap-1">
       <h2>{summary}</h2>
+      <ContactBar email={email} phone={phone} profiles={profiles} name={name} />
     </div>
   </div>
 </Section>
 
 <style>
-  .info {
-    @apply flex flex-col gap-0 pr-8 print:gap-0 print:pr-0;
-  }
-
   h1 {
     @apply text-5xl font-bold print:text-3xl;
   }

@@ -1,0 +1,19 @@
+---
+import Pill from "./Pill.astro"
+
+interface Props {
+  language: string
+  fluency: string
+}
+
+const { language, fluency } = Astro.props
+---
+
+<Pill label={language}>
+  <div
+    aria-label="fluency"
+    class="bg-white/10 text-[10px] rounded-full p-px w-4 h-4 text-center"
+  >
+    {fluency}
+  </div>
+</Pill>
