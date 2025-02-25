@@ -5,7 +5,7 @@
     "email": "rickybok@gmail.com",
     "phone": "+64 2041837005",
     "url": "https://rickybok.com",
-    "image": "/me_avatar.jpg",
+    "image": "/me_avatar.webp",
     "summary": "Senior Front End Engineer with expertise in leading multinational software development teams, designing, documenting, implementing, and delivering software solutions that span across platforms.",
     "theme": "blue",
     "location": {
@@ -50,14 +50,16 @@
       "url": "https://www.informatica.com/",
       "startDate": "2021-11-01",
       "endDate": "2023-12-01",
-      "summary": "Hands on front end application development with complex forms and customised behaviour. Technologies used include Typescript, React, GraphQL, Cypress.",
+      "summary": "Front end application development for a data privacy software platform which allowed users to shop for data whilst allowing others to create rules and transformation to safeguard sensitive data.",
       "responsibilities": [
-        "System Design and Project Management. Ensure projects were delivered on time and expectations were managed across the teams. My responsibilities also included documenting, designing API, and user flow requirements for different features.",
-        "Mentoring members of the team to foster knowledge sharing and maintain high coding standards.",
-        "Participated in code reviews and contributed to improving coding standards within the team."
+        "Lead the development and architecture of new features like our custom rule builder, adding integration and end to end tests to fulfill business requirements.",
+        "Ensure features were delivered on time and expectations were managed across different teams. My responsibilities also included documenting, designing API, and user flow requirements for different features.",
+        "Work alongside product & project managers, designers, and other engineers to transform creative concepts into refined digital experiences at an agile (2 week) cadence.",
+        "Mentoring members of the team to foster knowledge sharing and maintain high coding standards."
       ],
       "skills": ["React", "TypeScript", "Cypress", "GraphlQL", "GitHub"],
-      "experience_type": "Employment"
+      "experience_type": "Employment",
+      "tags": ["dev"]
     },
     {
       "name": "digi.me",
@@ -79,7 +81,8 @@
         "Developed internal full stack web applications or engineering tools. Built on Next.JS or Express.JS frameworks, using Typescript, React, Xstate."
       ],
       "skills": ["Next", "TypeScript", "React", "Redux", "Electron", "GitHub"],
-      "experience_type": "Employment"
+      "experience_type": "Employment",
+      "tags": ["dev"]
     },
     {
       "name": "SmallWorlds",
@@ -100,7 +103,8 @@
         "Developing web content for their online newsletter and blog."
       ],
       "skills": ["ActionScript", "Flash", "Adobe AIR"],
-      "experience_type": "Employment"
+      "experience_type": "Employment",
+      "tags": ["dev"]
     },
     {
       "name": "Fujifilms",
@@ -122,7 +126,8 @@
         "Developed internal full stack web applications or engineering tools. Built on Next.JS or Express.JS frameworks, using Typescript, React, Xstate."
       ],
       "skills": ["ActionScript", "Flex", "Adobe AIR"],
-      "experience_type": "Employment"
+      "experience_type": "Employment",
+      "tags": ["dev"]
     },
     {
       "name": "Familia H Tours",
@@ -143,7 +148,8 @@
       },
       "skills": ["Capcut", "Canva"],
       "location_type": "On-site",
-      "experience_type": "Volunteer"
+      "experience_type": "Volunteer",
+      "tags": ["video", "teaching"]
     },
     {
       "name": "italki",
@@ -157,7 +163,8 @@
         "Created material and resources to help students learn the language from scratch"
       ],
       "location_type": "online",
-      "experience_type": "Self-employment"
+      "experience_type": "Self-employment",
+      "tags": ["teaching"]
     }
   ],
   "education": [
@@ -276,12 +283,21 @@
     }
   ],
   "languages": [
-    { "language": "English", "fluency": "C2" },
-    { "language": "Cantonese", "fluency": "C2" },
-    { "language": "Mandarin", "fluency": "C2" },
-    { "language": "Spanish", "fluency": "B2" }
+    { "language": "English", "fluency": "", "countryCode": "UK" },
+    { "language": "Cantonese", "fluency": "", "countryCode": "HK" },
+    { "language": "Mandarin", "fluency": "", "countryCode": "CN" },
+    { "language": "Spanish", "fluency": "B2", "countryCode": "ES" },
+    { "language": "Japanese", "fluency": "A2", "countryCode": "JP" }
   ],
-  "interests": [],
+  "interests": [
+    "Badminton",
+    "Travel",
+    "Swimming",
+    "Hiking",
+    "Languages",
+    "Self Improvement",
+    "Karaoke"
+  ],
   "references": [],
   "projects": []
 }

@@ -4,6 +4,10 @@ import AU from "@/icons/countries/au.astro"
 import MX from "@/icons/countries/mx.astro"
 import NZ from "@/icons/countries/nz.astro"
 import UK from "@/icons/countries/uk.astro"
+import HK from "@/icons/countries/hk.astro"
+import ES from "@/icons/countries/es.astro"
+import CN from "@/icons/countries/cn.astro"
+import JP from "@/icons/countries/jp.astro"
 
 interface Props extends HTMLAttributes<"div"> {
   countryCode: string
@@ -12,13 +16,16 @@ interface Props extends HTMLAttributes<"div"> {
 const { countryCode, class: className, ...rest } = Astro.props
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const COUNTRY_ICONS: Record<string, any> = { AU, MX, NZ, UK }
+const COUNTRY_ICONS: Record<string, any> = { AU, MX, NZ, UK, HK, ES, CN, JP }
 const Icon = COUNTRY_ICONS[countryCode]
 ---
 
 {
   Icon && (
-    <div class:list={["[&>svg]:size-4", className]} {...rest}>
+    <div
+      class:list={["[&>svg]:w-4 border-b border-r border-white/40", className]}
+      {...rest}
+    >
       <Icon />
     </div>
   )

@@ -11,13 +11,13 @@ const { image, name, class: className, ...attrs } = Astro.props
 
 <div
   class:list={[
-    "ackground-position-center background-repeat-no-repeat rounded-full w-full",
+    "background-position-center background-repeat-no-repeat rounded-full w-full",
     className,
   ]}
   {...attrs}
 >
   <img
-    class="shadow-lg shadow-skin-hues rounded-full border-4 border-text-skin-base h-auto w-auto max-w-32 object-cover block aspect-square"
+    class="shadow-lg shadow-skin-hues rounded-full border-4 border-text-skin-base h-auto w-auto max-w-44 object-cover block aspect-square"
     src={image}
     alt={name}
   />

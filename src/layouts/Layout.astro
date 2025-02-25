@@ -72,6 +72,14 @@ const { image, summary, url, theme } = basics
           "Open Sans",
           "Helvetica Neue",
           sans-serif;
+        background: rgb(255, 255, 255);
+        background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.1) 90%
+        );
+        background-size: 100% 5em;
+        background-repeat: no-repeat;
       }
 
       a {
@@ -83,6 +91,7 @@ const { image, summary, url, theme } = basics
         margin: 0;
         padding: 0;
         font-size: large;
+        line-height: 1.7;
       }
 
       *,
@@ -101,7 +110,7 @@ const { image, summary, url, theme } = basics
 
       p {
         @apply text-base text-skin-muted;
-        line-height: 1.6;
+        line-height: 1.7;
         text-wrap: pretty;
         font-size: large;
       }

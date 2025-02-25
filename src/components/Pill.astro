@@ -1,13 +1,18 @@
 ---
-interface Props {
+import type { HTMLAttributes } from "astro/types"
+
+interface Props extends HTMLAttributes<"div"> {
   label: string
 }
 
-const { label } = Astro.props
+const { label, class: className } = Astro.props
 ---
 
 <li
-  class="bg-skin-hue/40 text-skin-base flex gap-1 items-center rounded-md px-2 py-1 text-xs"
+  class:list={[
+    "bg-skin-hue/40 text-skin-base flex gap-1 items-center rounded-md px-2 py-1 text-sm",
+    className,
+  ]}
 >
   <slot />
   <span>{label}</span>

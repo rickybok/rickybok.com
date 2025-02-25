@@ -6,18 +6,55 @@ import { experience } from "@cv"
 import ExperienceEntry from "./ExperienceEntry.astro"
 import { SECTION_IDS } from "../Constants"
 
-const employment = experience.sort(
-  (a: { startDate: string }, b: { startDate: string }) =>
-    new Date(b.startDate).getTime() - new Date(a.startDate).getTime(),
-)
+const sortByDate = (a: { startDate: string }, b: { startDate: string }) =>
+  new Date(b.startDate).getTime() - new Date(a.startDate).getTime()
+
+const devExperience = experience
+  .filter((position) => position.tags?.includes("dev"))
+  .sort(sortByDate)
+
+const otherExperience = experience
+  .filter((position) => !position.tags?.includes("dev"))
+  .sort(sortByDate)
 ---
 
 <Section
-  className={Astro.props.className}
-  title="Experience"
+  title="Work Experience"
   sectionId={SECTION_IDS.experience}
+  x-data="{ open: false }"
+  class="items-center"
 >
   <ul class="flex flex-col">
-    {employment.map((position) => <ExperienceEntry experience={position} />)}
+    {devExperience.map((position) => <ExperienceEntry experience={position} />)}
+  </ul>
+  <button
+    @click="open = ! open"
+    class="w-fit cursor-pointer items-center justify-center gap-1.5 text-base underline text-skin-muted hover:text-skin-base flex"
+  >
+    <span
+      x-text="open ? 'Hide Non Web Development Experience' : 'Show Non Web Development Experience'"
+      >Show more</span
+    >
+    <svg
+      class="w-4 h-4 group-hover/more:translate-y-0.5 duration-200 ease-out"
+      :class="{ 'rotate-180': open }"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg
+    >
+  </button>
+  <ul x-show="open" x-transition.duration.500ms>
+    {
+      otherExperience.map((position) => (
+        <ExperienceEntry experience={position} />
+      ))
+    }
   </ul>
 </Section>
+
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+></script>

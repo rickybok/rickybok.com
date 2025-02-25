@@ -1,7 +1,8 @@
 ---
+import type { HTMLAttributes } from "astro/types"
 import PositionCard from "../PositionCard.astro"
 
-interface Props {
+interface Props extends HTMLAttributes<"li"> {
   entry: {
     institution: string
     startDate: string
@@ -13,11 +14,12 @@ interface Props {
   }
 }
 
+const { class: className, entry, ...rest } = Astro.props
 const { institution, startDate, endDate, title, url, location, location_type } =
-  Astro.props.entry
+  entry
 ---
 
-<li class="relative pt-3 pb-16 h-full">
+<li class:list={["relative pt-3 pb-16 h-full", className]} {...rest}>
   <div class="absolute -left-4 sm:left-1/4 top-6 bottom-20 w-px bg-skin-muted">
   </div>
   <div
@@ -41,40 +43,14 @@ const { institution, startDate, endDate, title, url, location, location_type } =
       </div>
       <div class="flex flex-col gap-4">
         <div
-          class="flex relative flex-col max-sm:!h-auto gap-4 md:after:bg-gradient-to-t md:after:absolute md:after:bottom-0 md:after:w-full md:after:h-12 md:after:content-['']"
+          class="flex relative flex-col max-sm:!h-auto gap-6 md:after:bg-gradient-to-t md:after:absolute md:after:bottom-0 md:after:w-full md:after:h-12 md:after:content-['']"
         >
           <slot />
         </div>
-        <!-- <button
-          @click="expanded = ! expanded"
-          class="group/more w-fit cursor-pointer items-center justify-center gap-1.5 text-xs underline text-skin-muted transition-all hover:text-skin-base flex"
-        >
-          <span x-text="expanded ? 'Show less' : 'Show more'">Show more</span>
-          <svg
-            class="w-4 h-4 group-hover/more:translate-y-0.5 duration-200 ease-out"
-            :class="{ 'rotate-180': expanded }"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            ><polyline points="6 9 12 15 18 9"></polyline></svg
-          >
-        </button> -->
         <slot name="footer" />
       </div>
     </div>
   </div>
-
-  <script
-    defer
-    src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"
-  ></script>
-  <script
-    defer
-    src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
   <style>
     li::marker {

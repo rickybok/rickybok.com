@@ -3,55 +3,50 @@ import Avatar from "../Avatar.astro"
 import Section from "../Section.astro"
 import { SECTION_IDS } from "../Constants"
 
-import { about, basics, languages } from "@cv"
+import { about, basics, languages, interests } from "@cv"
 import LanguagePill from "../LanguagePill.astro"
+import Pill from "../Pill.astro"
 const { name, image } = basics
 ---
 
 <Section title="Who am I?" sectionId={SECTION_IDS.about}>
-  <!-- <div class="flex flex-col sm:flex-row gap-4 mt-12">
-    <div class="sm:w-1/4 flex flex-col gap-12 pr-4">
-      <Avatar image={image} name={name} />
-      {
-        languages && (
-          <div class="flex flex-col gap-2">
-            <h2 class="text-skin-muted">Languages Spoken</h2>
-            <ul class="flex flex-wrap gap-2" aria-label="Languages spoken">
-              {languages &&
-                languages.map(({ language }) => {
-                  return <Pill label={language} />
-                })}
-            </ul>
-          </div>
-        )
-      }
-    </div>
-    <div class="sm:w-3/4">
-      {
-        about.map((para) => {
-          return <p class="mb-6">{para}</p>
-        })
-      }
-    </div>
-  </div> -->
   <div class="wrapper">
     <Avatar id="avatar" image={image} name={name} />
     <div id="about-more" class="flex flex-col gap-12 pr-4">
       {
         languages && (
           <div class="flex flex-col gap-2">
-            <h2 class="text-skin-base">Languages Spoken</h2>
+            <h2 class="text-skin-base">Languages Spoken:</h2>
             <ul class="flex flex-wrap gap-2" aria-label="Languages spoken">
               {languages &&
-                languages.map(({ fluency, language }) => {
-                  return <LanguagePill fluency={fluency} language={language} />
+                languages.map(({ fluency, language, countryCode }) => {
+                  return (
+                    <LanguagePill
+                      fluency={fluency}
+                      language={language}
+                      countryCode={countryCode}
+                    />
+                  )
+                })}
+            </ul>
+          </div>
+        )
+      }
+      {
+        interests && (
+          <div class="flex flex-col gap-2">
+            <h2 class="text-skin-base">Personal Interests:</h2>
+            <ul class="flex flex-wrap gap-2" aria-label="Personal Interests">
+              {interests &&
+                interests.map((interest) => {
+                  return <Pill label={interest} />
                 })}
             </ul>
           </div>
         )
       }
     </div>
-    <div id="about-content">
+    <div id="about-content" class="sm:pl-4">
       {
         about.map((para) => {
           return <p class="mb-6">{para}</p>
@@ -65,7 +60,7 @@ const { name, image } = basics
   .wrapper {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    grid-template-rows: 10em 1fr;
+    grid-template-rows: 14em 1fr;
   }
   #avatar {
     grid-area: 1 / 1 / 3 / 1;
