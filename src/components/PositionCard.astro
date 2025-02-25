@@ -27,9 +27,11 @@ const { position, company, url, startDate, endDate, location } = Astro.props
     class="absolute w-3 h-3 bg-white bubble-arrow rounded-full max-sm:-left-5 sm:-right-6 -translate-x-[0.1rem] top-5"
   >
   </div>
-  <div class="flex flex-row sm:flex-col sm:gap-0 gap-1 sm:text-base text-xl">
-    <h2 class="font-semibold">{position}</h2>
-    <div class="content-center text-xs">
+  <div
+    class="sm:text-base text-xl flex xs:gap-2 flex-col sm:flex-col sm:gap-0 xs:flex-row"
+  >
+    <h2 class="font-semibold float-left">{position}</h2>
+    <div class="content-center text-sm">
       <span>@</span>
       {
         url ? (

@@ -32,6 +32,7 @@ export default {
       },
       ringColor: { skin: { fill: withOpacity("--color-fill") } },
       gradientColorStops: { skin: { hue: withOpacity("--color-fill") } },
+      screens: { xs: "400px" },
     },
   },
   variants: { extend: {} },

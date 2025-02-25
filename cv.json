@@ -50,7 +50,10 @@
       "url": "https://www.informatica.com/",
       "startDate": "2021-11-01",
       "endDate": "2023-12-01",
-      "summary": "Front end application development for a data privacy software platform which allowed users to shop for data whilst allowing others to create rules and transformation to safeguard sensitive data.",
+      "summary": [
+        "Front end application development for a data privacy software platform which allowed users to shop for data whilst allowing others to create rules and transformation to safeguard sensitive data.",
+        "Privitar was acquired by Informatica in 2023."
+      ],
       "responsibilities": [
         "Lead the development and architecture of new features like our custom rule builder, adding integration and end to end tests to fulfill business requirements.",
         "Ensure features were delivered on time and expectations were managed across different teams. My responsibilities also included documenting, designing API, and user flow requirements for different features.",
@@ -73,7 +76,9 @@
       "url": "https://digi.me/",
       "startDate": "2015-10-01",
       "endDate": "2021-08-01",
-      "summary": "Hands on full stack web application development with projects for desktop, web and a javascript SDK.",
+      "summary": [
+        "Hands on full stack web application development with projects for desktop, web and a javascript SDK."
+      ],
       "responsibilities": [
         "Led a development team of five to implement and deliver company products utilising both Waterfall and Agile software development methodologies.",
         "Developed a desktop MacOS/Windows client to view user data. Built on Electron using Typescript, React, React-virtualized, Redux Saga, Styled Components, Jest.",
@@ -96,7 +101,9 @@
       "url": "https://www.fujifilm.com/au/en/business/photofinishing/imagine",
       "startDate": "2007-01-01",
       "endDate": "2011-01-01",
-      "summary": "I was involved in creating and maintaining the online virtual world SmallWorlds, which had over a million registered users in its hayday. It was built using Adobe Flex with a Java backend.",
+      "summary": [
+        "I was involved in creating and maintaining the online virtual world SmallWorlds, which had over a million registered users in its hayday. It was built using Adobe Flex with a Java backend."
+      ],
       "responsibilities": [
         "Developing Flash widgets used in the virtual world which connected to social networks such as Twitter, Youtube and Soundcloud.",
         "Developing and maintaining features for the core platform such as avatar creation and online shopping.",
@@ -118,7 +125,9 @@
       "url": "https://www.fujifilm.com/au/en/business/photofinishing/imagine",
       "startDate": "2011-08-01",
       "endDate": "2015-07-01",
-      "summary": "Worked on a cross platform digital imaging point of sales software which allowed users to design and create their own photobooks/canvas etc. online or on kiosks. I was involved in a major overhaul of the software that included using templates that instructed how elements are laid out on the fly.",
+      "summary": [
+        "Worked on a cross platform digital imaging point of sales software which allowed users to design and create their own photobooks/canvas etc. online or on kiosks. I was involved in a major overhaul of the software that included using templates that instructed how elements are laid out on the fly."
+      ],
       "responsibilities": [
         "Led a development team of five to implement and deliver company products utilising both Waterfall and Agile software development methodologies.",
         "Developed a desktop MacOS/Windows client to view user data. Built on Electron using Typescript, React, React-virtualized, Redux Saga, Styled Components, Jest.",
@@ -135,7 +144,9 @@
       "url": "https://www.htoursmexico.com/",
       "startDate": "2024-09-01",
       "endDate": "2024-10-01",
-      "summary": "Worked in a travel agency in Guadalajara, Mexico and helped with their social media presence. This was in a full immersive Spanish speaking environment which cemented my confidence as a Spanish speaker.",
+      "summary": [
+        "Worked in a travel agency in Guadalajara, Mexico and helped with their social media presence. This was in a full immersive Spanish speaking environment which cemented my confidence as a Spanish speaker."
+      ],
       "responsibilities": [
         "Filmed, created and edited videos for Youtube and Instagram.",
         "Helped out on designing and creation of their 2025 travel brochures for the upcoming year.",
@@ -156,7 +167,9 @@
       "position": "Language Tutor",
       "url": "https://www.italki.com/es/teacher/4294132",
       "startDate": "2020-01-01",
-      "summary": "Started in 2020, I've been an online language tutor teaching students from all over the world. This has allowed me to work with people from all different backgrounds and allowed me to be a better mentor in all aspects of life.",
+      "summary": [
+        "Started in 2020, I've been an online language tutor teaching students from all over the world. This has allowed me to work with people from all different backgrounds and allowed me to be a better mentor in all aspects of life."
+      ],
       "responsibilities": [
         "I've taught lessons in English, Cantonese, and Mandarin.",
         "Worked with students from all different backgrounds and ages to provide support and motivation on their language journey.",
@@ -181,7 +194,9 @@
         "countryCode": "NZ",
         "region": "New Zealand"
       },
-      "summary": "I graduated with a Bachelor of Engineering (BE) degree and over my four years in the university I've achieved an average of A- grades over all the courses I've taken. It was here where I learnt a lot of the fundamental concepts of software development and the professional conduct of being an engineer.",
+      "summary": [
+        "I graduated with a Bachelor of Engineering (BE) degree and over my four years in the university I've achieved an average of A- grades over all the courses I've taken. It was here where I learnt a lot of the fundamental concepts of software development and the professional conduct of being an engineer."
+      ],
       "achievements": ["First Class Honours in Software Engineering."],
       "skills": ["Java", "C#"]
     },
@@ -197,7 +212,9 @@
         "countryCode": "NZ",
         "region": "New Zealand"
       },
-      "summary": "After graduating my BE degree, I decided to pursue my passion of web design and development by studying a one year diploma of Digital Media Design where I had the opportunity to build and design many different media for the web. I was also introduced to Adobe Flash and this launched me into different roles in the first ten years of my professional career.",
+      "summary": [
+        "After graduating my BE degree, I decided to pursue my passion of web design and development by studying a one year diploma of Digital Media Design where I had the opportunity to build and design many different media for the web. I was also introduced to Adobe Flash and this launched me into different roles in the first ten years of my professional career."
+      ],
       "skills": ["HTML", "CSS", "Flash", "Photoshop", "JavaScript"],
       "achievements": ["Highly Commended in Technical Aptitude."]
     }

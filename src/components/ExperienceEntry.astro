@@ -8,7 +8,7 @@ interface Props {
     startDate: string
     endDate?: string
     position: string
-    summary?: string
+    summary?: string[] | string
     responsibilities?: string[]
     achievements?: string[]
     url?: string
@@ -31,6 +31,8 @@ const {
   location,
   location_type,
 } = Astro.props.experience
+
+const summaryArray = Array.isArray(summary) ? summary : [summary]
 ---
 
 <TimelineEntry
@@ -46,8 +48,10 @@ const {
 >
   {
     summary && (
-      <div class="flex flex-col gap-1">
-        <p>{summary}</p>
+      <div class="flex flex-col gap-4">
+        {summaryArray.map((summary) => (
+          <p>{summary}</p>
+        ))}
       </div>
     )
   }
