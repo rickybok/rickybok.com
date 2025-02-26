@@ -1,57 +1,6 @@
 ---
-import HTML from "@/icons/html.astro"
-import CSS from "@/icons/css.astro"
-import JavaScript from "@/icons/javascript.astro"
-import TypeScript from "@/icons/type.astro"
-import React from "@/icons/react.astro"
-import Node from "@/icons/node.astro"
-import MySQL from "@/icons/sql.astro"
-import Git from "@/icons/git.astro"
-import GitHub from "@/icons/GitHub.astro"
-import Tailwind from "@/icons/tailwind.astro"
-import Next from "@/icons/next.astro"
-import Swift from "@/icons/swift.astro"
-import SwiftUI from "@/icons/swiftui.astro"
-import Kotlin from "@/icons/kotlin.astro"
-import Flutter from "@/icons/flutter.astro"
-import Cypress from "@/icons/cypress.astro"
-import GraphlQL from "@/icons/graphql.astro"
-import Electron from "@/icons/electron.astro"
-import ActionScript from "@/icons/actionscript.astro"
-import Flash from "@/icons/flash.astro"
-import Flex from "@/icons/flash.astro"
-import Capcut from "@/icons/capcut.astro"
-import Photoshop from "@/icons/photoshop.astro"
-import Canva from "@/icons/canva.astro"
 import Pill from "./Pill.astro"
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const SKILLS_ICONS: Record<string, any> = {
-  HTML,
-  CSS,
-  JavaScript,
-  TypeScript,
-  React,
-  Node,
-  MySQL,
-  Git,
-  GitHub,
-  Next,
-  Tailwind,
-  Swift,
-  SwiftUI,
-  Kotlin,
-  Flutter,
-  Cypress,
-  GraphlQL,
-  Electron,
-  ActionScript,
-  Flash,
-  Flex,
-  Capcut,
-  Canva,
-  Photoshop,
-}
+import SkillIcon from "./SkillIcon.astro"
 
 interface Props {
   technologies: string[]
@@ -64,11 +13,9 @@ const technologies = Astro.props.technologies
   {
     technologies &&
       technologies.map((skill) => {
-        const iconName = skill === "Next.js" ? "Next" : skill
-        const Icon = SKILLS_ICONS[iconName]
         return (
           <Pill label={skill} class="text-base">
-            {Icon && <Icon />}
+            <SkillIcon skill={skill} />
           </Pill>
         )
       })

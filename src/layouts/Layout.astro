@@ -47,9 +47,9 @@ const { image, summary, url, theme } = basics
     <Vengeance />
   </head>
   <body data-theme={theme} class="relative bg-skin-fill">
-    <div class="absolute top-0 -z-10 h-full w-full print:hidden">
+    <div class="absolute top-0 -z-10 h-full w-full">
       <div
-        class="bg-skin-hue/10 absolute bottom-auto left-[20%] right-auto top-0 h-[200px] w-[200px] -translate-x-[30%] translate-y-[20%] rounded-full blur-[80px] invert-0 dark:bg-white/5"
+        class="absolute bottom-auto left-[20%] right-auto top-0 h-[200px] w-[200px] -translate-x-[30%] translate-y-[20%] rounded-full blur-[80px] invert-0 bg-white/5"
       >
       </div>
     </div>
@@ -80,6 +80,7 @@ const { image, summary, url, theme } = basics
         );
         background-size: 100% 5em;
         background-repeat: no-repeat;
+        color: rgba(var(--color-text-base), 100%);
       }
 
       a {

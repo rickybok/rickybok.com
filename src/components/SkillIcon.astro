@@ -1,0 +1,75 @@
+---
+import html from "@/icons/html.astro"
+import css from "@/icons/css.astro"
+import javascript from "@/icons/javascript.astro"
+import typescript from "@/icons/type.astro"
+import react from "@/icons/react.astro"
+import node from "@/icons/node.astro"
+import git from "@/icons/git.astro"
+import github from "@/icons/github.astro"
+import tailwind from "@/icons/tailwind.astro"
+import next from "@/icons/next.astro"
+import swift from "@/icons/swift.astro"
+import swiftui from "@/icons/swiftui.astro"
+import figma from "@/icons/figma.astro"
+import flutter from "@/icons/flutter.astro"
+import cypress from "@/icons/cypress.astro"
+import graphlql from "@/icons/graphql.astro"
+import electron from "@/icons/electron.astro"
+import actionscript from "@/icons/actionscript.astro"
+import flash from "@/icons/flash.astro"
+import flex from "@/icons/flash.astro"
+import capcut from "@/icons/capcut.astro"
+import photoshop from "@/icons/photoshop.astro"
+import canva from "@/icons/canva.astro"
+import astro from "@/icons/astro.astro"
+import docker from "@/icons/docker.astro"
+import storybook from "@/icons/storybook.astro"
+import styledcomponents from "@/icons/styledcomponents.astro"
+import webpack from "@/icons/webpack.astro"
+import netlify from "@/icons/netlify.astro"
+import markdown from "@/icons/markdown.astro"
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const SKILLS_ICONS: Record<string, any> = {
+  html,
+  css,
+  javascript,
+  typescript,
+  react,
+  "node.js": node,
+  git,
+  github,
+  "next.js": next,
+  tailwind,
+  swift,
+  swiftui,
+  figma,
+  flutter,
+  cypress,
+  graphlql,
+  electron,
+  actionscript,
+  flash,
+  flex,
+  capcut,
+  canva,
+  photoshop,
+  astro,
+  docker,
+  storybook,
+  "styled components": styledcomponents,
+  webpack,
+  netlify,
+  markdown,
+}
+
+interface Props {
+  skill: string
+}
+
+const { skill } = Astro.props
+const Icon = SKILLS_ICONS[skill.toLowerCase()]
+---
+
+{Icon && <Icon />}

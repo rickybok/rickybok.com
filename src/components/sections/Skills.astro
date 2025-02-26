@@ -1,45 +1,19 @@
 ---
 import Section from "../Section.astro"
-import HTML from "@/icons/html.astro"
-import CSS from "@/icons/css.astro"
-import JavaScript from "@/icons/javascript.astro"
-import TypeScript from "@/icons/type.astro"
-import React from "@/icons/react.astro"
-import Node from "@/icons/node.astro"
-import MySQL from "@/icons/sql.astro"
-import Git from "@/icons/git.astro"
-import GitHub from "@/icons/GitHub.astro"
-import Tailwind from "@/icons/tailwind.astro"
-import Next from "@/icons/next.astro"
 import { skills } from "@cv"
-import Swift from "@/icons/swift.astro"
-import SwiftUI from "@/icons/swiftui.astro"
-import Kotlin from "@/icons/kotlin.astro"
-import Flutter from "@/icons/flutter.astro"
-import Figma from "@/icons/Figma.astro"
-import Gitlab from "@/icons/Gitlab.astro"
-import { SECTION_IDS } from "../Constants"
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const SKILLS_ICONS: Record<string, any> = {
-  HTML,
-  CSS,
-  JavaScript,
-  TypeScript,
-  React,
-  Node,
-  MySQL,
-  Git,
-  GitHub,
-  Next,
-  Tailwind,
-  Swift,
-  SwiftUI,
-  Kotlin,
-  Flutter,
-  Figma,
-  Gitlab,
-}
+import { SECTION_IDS } from "../Constants"
+import SkillIcon from "../SkillIcon.astro"
+
+const programmingLanguages = skills.filter((skill) =>
+  skill.tags.some((tag) => tag.toLowerCase() === "languages"),
+)
+const libraries = skills.filter((skill) =>
+  skill.tags.some((tag) => tag.toLowerCase() === "libraries"),
+)
+const tools = skills.filter((skill) =>
+  skill.tags.some((tag) => tag.toLowerCase() === "tools"),
+)
 ---
 
 <Section
@@ -47,20 +21,69 @@ const SKILLS_ICONS: Record<string, any> = {
   title="Skills"
   sectionId={SECTION_IDS.skills}
 >
-  <ul
-    class="[&>li>svg]:text-skin-hue inline-flex flex-wrap gap-6 [&>li>svg]:size-5 [&>li]:text-sm"
-  >
-    {
-      skills.map(({ name }) => {
-        const iconName = name === "Next.js" ? "Next" : name
-        const Icon = SKILLS_ICONS[iconName]
-
-        return (
-          <li class="border-skin-hue/20s bg-skin-button-accent/20s borders border-solids flex items-center gap-1 rounded-md px-2 py-0.5 text-xs text-skin-muted">
-            {Icon && <Icon />} <span>{name}</span>
-          </li>
-        )
-      })
-    }
-  </ul>
+  <div class="flex flex-col md:flex-row gap-8 w-full">
+    <div class="skills-container">
+      <h3 class="border-[#F6AE2D]">Programming Languages</h3>
+      <ul
+        class="[&>li>svg]:text-[#F6AE2D] inline-flex flex-wrap gap-6 [&>li>svg]:size-5 [&>li]:text-sm"
+      >
+        {
+          programmingLanguages.map(({ name }) => {
+            return (
+              <li class="skills">
+                <SkillIcon skill={name} />
+                <span>{name}</span>
+              </li>
+            )
+          })
+        }
+      </ul>
+    </div>
+    <div class="skills-container">
+      <h3 class="border-[#86BBD8]">Libraries and Frameworks</h3>
+      <ul
+        class="[&>li>svg]:text-[#86BBD8] inline-flex flex-wrap gap-6 [&>li>svg]:size-5 [&>li]:text-sm"
+      >
+        {
+          libraries.map(({ name }) => {
+            return (
+              <li class="skills">
+                <SkillIcon skill={name} />
+                <span>{name}</span>
+              </li>
+            )
+          })
+        }
+      </ul>
+    </div>
+    <div class="skills-container">
+      <h3 class="border-[#758E4F]">Tools</h3>
+      <ul
+        class="[&>li>svg]:text-[#758E4F] inline-flex flex-wrap gap-6 [&>li>svg]:size-5 [&>li]:text-sm"
+      >
+        {
+          tools.map(({ name }) => {
+            return (
+              <li class="skills">
+                <SkillIcon skill={name} />
+                <span>{name}</span>
+              </li>
+            )
+          })
+        }
+      </ul>
+    </div>
+  </div>
 </Section>
+
+<style>
+  .skills-container {
+    @apply flex flex-col pt-0 gap-2 py-2 border-l-0 basis-0 grow;
+    h3 {
+      @apply text-xl font-semibold mb-4 border-l-2 pl-2;
+    }
+  }
+  .skills {
+    @apply border-solid flex items-center gap-1 rounded-md px-2 py-0.5 text-base text-skin-muted;
+  }
+</style>
