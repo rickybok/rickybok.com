@@ -10,7 +10,7 @@ const { name, profiles, phone, email } = basics
   <div
     class="flex flex-row justify-between items-baseline max-w-5xl w-full px-8"
   >
-    {name && <h1 class="transition duration-300 ease-in-out">{title}.</h1>}
+    {name && <h1>{title}.</h1>}
     <ContactBar email={email} phone={phone} profiles={profiles} name={name} />
     <slot />
   </div>
@@ -20,14 +20,16 @@ const { name, profiles, phone, email } = basics
   h1 {
     @apply text-xl font-bold;
   }
+
   .header {
     border-bottom: 1px solid rgb(var(--color-button-muted), 0%);
-    animation: header-hide 0.5s ease-out;
+    animation: header-hide 0.3s ease-out;
     display: none;
   }
+
   .header.show {
     display: flex;
-    animation: header-show 0.5s ease-out;
+    animation: header-show 0.3s ease-out;
     border-bottom: 1px solid rgb(var(--color-button-muted), 100%);
     background: rgba(var(--color-fill), 100%);
     z-index: 999;

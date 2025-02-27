@@ -4,7 +4,7 @@ const { class: className, title, sectionId, ...rest } = Astro.props
 
 <section
   id={`container-${sectionId}`}
-  class:list={["flex flex-col gap-4 pt-8", className]}
+  class:list={["flex flex-col gap-4 pt-4", className]}
   {...rest}
 >
   {sectionId && <a class="anchor" id={sectionId} />}

@@ -17,13 +17,13 @@ export default {
           base: withOpacity("--color-text-base"),
           muted: withOpacity("--color-text-muted"),
           inverted: withOpacity("--color-text-inverted"),
+          accent: withOpacity("--color-secondary"),
         },
       },
       backgroundColor: {
         skin: {
           fill: withOpacity("--color-fill"),
-          "button-accent": withOpacity("--color-button-accent"),
-          "button-accent-hover": withOpacity("--color-button-accent-hover"),
+          "button-accent": withOpacity("--color"),
           "button-muted": withOpacity("--color-button-muted"),
         },
       },

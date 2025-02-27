@@ -34,7 +34,7 @@ const { email, phone, name, profiles } = Astro.props
             </div>
           </div>
         </div>
-        <button @click="copyToClipboard();" class="group flex h-8 w-9 cursor-pointer items-center justify-center rounded-md text-skin-muted hover:bg-skin-button-accent hover:text-skin-inverted [&>span]:hover:text-skin-inverted">
+        <button @click="copyToClipboard();" class="group flex h-8 w-9 cursor-pointer items-center justify-center rounded-md text-skin-muted">
           <svg x-show="copyNotification" class="h-4 w-4 stroke-current text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" x-cloak>
             <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
           </svg>
@@ -70,7 +70,7 @@ const { email, phone, name, profiles } = Astro.props
 		@apply mt-2 flex gap-1 text-sm text-skin-muted;
 	}
 
-	footer a, footer button, footer span {
+	footer a, footer button {
 		@apply inline-flex size-8 items-center justify-center rounded-md p-1 transition-all duration-500 ease-linear text-skin-muted hover:bg-skin-button-accent hover:text-skin-inverted;
 	}
 </style>

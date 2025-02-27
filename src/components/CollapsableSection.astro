@@ -1,0 +1,36 @@
+---
+import type { HTMLAttributes } from "astro/types"
+
+interface Props extends HTMLAttributes<"div"> {
+  openByDefault?: boolean
+}
+
+const { openByDefault = false, ...rest } = Astro.props
+---
+
+<div x-data=`{ open: ${openByDefault} }` {...rest}>
+  <div class="flex flex-row gap-2 items-end">
+    <slot name="section-title" />
+    <button
+      @click="open = ! open"
+      class="w-fit cursor-pointer items-center justify-center mb-px gap-1.5 text-xs text-skin-muted hover:text-skin-base flex"
+    >
+      <span x-text="open ? 'Hide' : 'Show'">Show</span>
+      <svg
+        class="w-4 h-4 group-hover/more:translate-y-0.5 duration-200 ease-out"
+        :class="{ 'rotate-180': open }"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        ><polyline points="6 9 12 15 18 9"></polyline></svg
+      >
+    </button>
+  </div>
+  <div x-show="open" x-transition.opacity.duration.500ms>
+    <slot />
+  </div>
+</div>
