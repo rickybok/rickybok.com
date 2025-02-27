@@ -20,12 +20,12 @@ const { institution, startDate, endDate, title, url, location, location_type } =
 ---
 
 <li class:list={["relative pt-3 pb-16 h-full", className]} {...rest}>
-  <div class="absolute -left-4 sm:left-1/4 top-6 bottom-20 w-px bg-skin-muted">
+  <div class="absolute -left-4 md:left-1/4 top-6 bottom-20 w-px bg-skin-muted">
   </div>
   <div
-    class="relative flex flex-col sm:flex-row pb-1 transition-all sm:gap-8 lg:hover:!opacity-100"
+    class="relative flex flex-col md:flex-row pb-1 transition-all md:gap-8 lg:hover:!opacity-100"
   >
-    <div class="relative mt-1 text-xs sm:w-1/4">
+    <div class="relative mt-1 text-xs md:w-1/4">
       <PositionCard
         position={title}
         location={location}
@@ -36,9 +36,9 @@ const { institution, startDate, endDate, title, url, location, location_type } =
         endDate={endDate}
       />
     </div>
-    <div class="relative flex-2 flex-col sm:w-3/4">
+    <div class="relative flex-2 flex-col md:w-3/4">
       <div
-        class="absolute bottom-2 w-2 h-2 bg-skin-muted rounded-full -left-5 sm:-left-7"
+        class="absolute bottom-2 w-2 h-2 bg-skin-muted rounded-full -left-5 md:-left-7"
       >
       </div>
       <div class="flex flex-col gap-4">

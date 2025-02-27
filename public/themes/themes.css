@@ -16,9 +16,9 @@
       --color-text-inverted: 240, 240, 240;
       --color-fill: 2, 6, 23;
       --muted: 51, 65, 85;
-      --color: 59, 130, 246;
+      --color: 134, 187, 216;
       --color-button-accent: 59, 130, 246;
-      --color-button-accent-hover: 0, 185, 255;
+      --color-button-accent-hover: 134, 187, 216;
       --color-button-muted: 30, 41, 59;
     }
     [data-theme="red"] {
