@@ -29,11 +29,11 @@
     ]
   },
   "about": [
-    "Hi I'm Ricky.",
-    "I've always had a strong interest in web development and UX, hence after my bachelor of software engineering degree, I did a diploma of digital media design where I could focus more on the design and user interface aspect of web. I started my career as an Adobe Flash Developer and eventually moved on to Javascript and Typescript with a focus on front end development.",
-    "Throughout my career I've led teams, been involved with system design and managed projects across teams to ensure on time delivery. ",
-    "Even though I grew up in Auckland, New Zealand, I moved abroad and worked and lived in Australia and the UK.",
-    "Outside of web development I'm also an avid language learner, learning in my spare time and eventually tutoring students part time through out the pandemic.",
+    "Hi, I'm Ricky. 👋",
+    "I've always had a strong interest in web development, especially in design and UX, hence after my bachelor of software engineering degree, I did a diploma of digital media design where I could focus more on asthetics side of web development. I started my career as an Adobe Flash Developer and eventually moved on to JavaScript and TypeScript with a focus on front end development.",
+    "Throughout my career I've developed full-stack, led teams, been involved with system design and managed projects across multinational teams to ensure on time delivery.",
+    "Even though I spent a lot of my life in Auckland, New Zealand, I moved abroad and I've worked and lived in Australia and the UK.",
+    "Outside of web development I'm also an avid language learner, learning in my spare time and eventually picked up a side gig of tutoring students online throughout the pandemic.",
     "I decided to take a career break in 2024 to pursue my dream of traveling and immersing myself in Spanish speaking environments. I walked the Camino de Santiago in Spain and traveled around Latin America, with a couple of volunteering stints in Mexico.",
     "I returned to New Zealand in 2025 to pursue new opportunities here."
   ],
@@ -64,7 +64,7 @@
         "React",
         "TypeScript",
         "Cypress",
-        "GraphlQL",
+        "GraphQL",
         "GitHub",
         "Chakra UI",
         "Figma",
@@ -120,7 +120,7 @@
       "startDate": "2007-01-01",
       "endDate": "2011-01-01",
       "summary": [
-        "I was involved in creating and maintaining the online virtual world SmallWorlds, which had over a million registered users in its hayday. It was built using Adobe Flex with a Java backend."
+        "I was involved in creating and maintaining the online virtual world SmallWorlds, which had over a million registered users in its heyday. It was built using Adobe Flex with a Java backend."
       ],
       "responsibilities": [
         "Developing Flash widgets used in the virtual world which connected to social networks such as Twitter, Youtube and Soundcloud.",
@@ -194,6 +194,28 @@
       "location_type": "online",
       "experience_type": "Self-employment",
       "tags": ["teaching"]
+    },
+    {
+      "name": "YouTube",
+      "position": "Content Creator",
+      "url": "https://www.youtube.com/@ItchyFeetGuide",
+      "startDate": "2019-11-01",
+      "endDate": "2021-07-01",
+      "summary": [
+        "With my friend Oli, we started the Itchy Feet Guide, a YouTube channel to showcase and introduce our town of Guildford and the surrounding region. The goal of this project was for us to pick up some new skills while helping local tourism along the way."
+      ],
+      "responsibilities": [
+        "Writing scripts, filming, presenting, researching, editing videos.",
+        "Collaborated with other content creators and maintained an online presence across different social media platforms."
+      ],
+      "location_type": "online",
+      "location": {
+        "city": "Surrey",
+        "countryCode": "UK",
+        "region": "United Kingdom"
+      },
+      "experience_type": "Self-employment",
+      "tags": ["teaching"]
     }
   ],
   "education": [
@@ -256,7 +278,7 @@
     { "name": "TypeScript", "tags": ["Languages"] },
     { "name": "HTML", "tags": ["Languages"] },
     { "name": "CSS", "tags": ["Languages"] },
-    { "name": "GraphlQL", "tags": ["Languages"] },
+    { "name": "GraphQL", "tags": ["Languages"] },
     { "name": "MarkDown", "tags": ["Languages"] }
   ],
   "languages": [

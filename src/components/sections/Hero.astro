@@ -12,18 +12,18 @@ const { summary, name, email, phone, profiles, location } = basics
     {name && <h1 class="transition duration-300 ease-in-out pb-4">{name}.</h1>}
     <div class="flex flex-col gap-1">
       <h2>{summary}</h2>
-      <div class="flex flex-row gap-4">
-        <ContactBar
-          email={email}
-          phone={phone}
-          profiles={profiles}
-          name={name}
-        />
+      <div class="flex sm:flex-row-reverse gap-4 flex-col sm:justify-end">
         <Location
           city={location.city}
           countryCode={location.countryCode}
           region={location.region}
           class="text-xs font-semibold mt-3"
+        />
+        <ContactBar
+          email={email}
+          phone={phone}
+          profiles={profiles}
+          name={name}
         />
       </div>
     </div>
