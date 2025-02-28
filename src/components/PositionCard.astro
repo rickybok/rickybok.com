@@ -24,13 +24,13 @@ const { position, company, url, startDate, endDate, location } = Astro.props
   p-4 md:gap-4 bg-white/10"
 >
   <div
-    class="absolute w-3 h-3 bg-white rounded-full max-md:-left-5 md:-right-6 -translate-x-[0.1rem] top-6"
+    class="absolute w-3 h-3 bg-white rounded-full max-md:-left-5 md:-right-6 -translate-x-[0.1rem] top-5"
   >
   </div>
   <div
-    class="md:text-base text-xl flex gap-0 xs:gap-2 flex-col md:flex-col md:gap-0 xs:flex-row"
+    class="md:text-base text-xl flex gap-0 xs:gap-2 flex-col md:flex-col md:gap-0 xs:flex-row xs:-mt-1"
   >
-    <h2 class="font-semibold">{position}</h2>
+    <h2 class="font-medium">{position}</h2>
     <div
       class="content-center text-sm xs:content-end md:content-center xs:pb-px -mt-1"
     >
@@ -58,7 +58,7 @@ const { position, company, url, startDate, endDate, location } = Astro.props
           city={location.city}
           region={location.region}
           countryCode={location.countryCode}
-          class="location"
+          class="text-sm"
         />
       )
     }
@@ -66,14 +66,11 @@ const { position, company, url, startDate, endDate, location } = Astro.props
 </div>
 
 <style>
-  h2 {
-    @apply font-extrabold;
-  }
   .positionCard:after {
     content: "";
     position: absolute;
     right: 0;
-    top: 2.5em;
+    top: 2.2em;
     width: 0;
     height: 0;
     border: 0.5em solid transparent;
@@ -87,7 +84,7 @@ const { position, company, url, startDate, endDate, location } = Astro.props
       content: "";
       position: absolute;
       left: 0;
-      top: 2.5em;
+      top: 2.2em;
       width: 0;
       height: 0;
       border: 0.5em solid transparent;
