@@ -60,7 +60,16 @@
         "Work alongside product & project managers, designers, and other engineers to transform creative concepts into refined digital experiences at an agile (2 week) cadence.",
         "Mentoring members of the team to foster knowledge sharing and maintain high coding standards."
       ],
-      "skills": ["React", "TypeScript", "Cypress", "GraphlQL", "GitHub"],
+      "skills": [
+        "React",
+        "TypeScript",
+        "Cypress",
+        "GraphlQL",
+        "GitHub",
+        "Chakra UI",
+        "Figma",
+        "Vite"
+      ],
       "experience_type": "Employment",
       "tags": ["dev"]
     },
@@ -77,16 +86,18 @@
       "startDate": "2015-10-01",
       "endDate": "2021-08-01",
       "summary": [
-        "Hands on full stack web application development with projects for desktop, web and a javascript SDK."
+        "Full-stack development on a suite of admin tools, data viewers and SDKs for the digi.me data sharing platform."
       ],
       "responsibilities": [
         "Led a development team of five to implement and deliver company products utilising both Waterfall and Agile software development methodologies.",
-        "Developed a desktop MacOS/Windows client to view user data. Built on Electron using Typescript, React, React-virtualized, Redux Saga, Styled Components, Jest.",
+        "Developed a desktop MacOS/Windows client to view user personal data such as social media, health and financial data. Built on Electron using TypeScript, React, React-virtualized, Redux Saga, Styled Components, Jest.",
         "Developed a Node.js SDK to help third parties utilise the digi.me private sharing platform. Used Typescript, and runtime type checking using io-ts",
-        "Developed internal full stack web applications or engineering tools. Built on Next.JS or Express.JS frameworks, using Typescript, React, Xstate."
+        "Designed and architected a visual display language that could be used to render any sort of user data",
+        "Developed internal full stack web applications or engineering tools. Built on Next.js or Express.js frameworks, using TypeScript, React, Xstate."
       ],
       "skills": [
-        "Next.JS",
+        "Next.js",
+        "Node.js",
         "TypeScript",
         "React",
         "Redux",
@@ -133,13 +144,11 @@
       "startDate": "2011-08-01",
       "endDate": "2015-07-01",
       "summary": [
-        "Worked on a cross platform digital imaging point of sales software which allowed users to design and create their own photobooks/canvas etc. online or on kiosks. I was involved in a major overhaul of the software that included using templates that instructed how elements are laid out on the fly."
+        "Worked on a cross platform digital imaging point of sales software which allowed users to design, create and print their own photobooks/canvas etc. online or on kiosks that could be found in local supermarkets throughout Australia."
       ],
       "responsibilities": [
-        "Led a development team of five to implement and deliver company products utilising both Waterfall and Agile software development methodologies.",
-        "Developed a desktop MacOS/Windows client to view user data. Built on Electron using Typescript, React, React-virtualized, Redux Saga, Styled Components, Jest.",
-        "Developed a Node.js SDK to help third parties utilise the digi.me private sharing platform. Used Typescript, and runtime type checking using io-ts",
-        "Developed internal full stack web applications or engineering tools. Built on Next.JS or Express.JS frameworks, using Typescript, React, Xstate."
+        "Implementing features and maintaining the photo kiosk software Imagine and its admin tool.",
+        "Spearheaded a major overhaul of the software that included using templates to layout screen elements on the fly, allowing different clients to have customised look and feel of the software."
       ],
       "skills": ["ActionScript", "Flex", "Adobe AIR"],
       "experience_type": "Employment",

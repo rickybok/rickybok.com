@@ -2,8 +2,9 @@
 import { basics } from "@cv"
 import Section from "@/components/Section.astro"
 import ContactBar from "./ContactBar.astro"
+import Location from "./Location.astro"
 
-const { summary, name, email, phone, profiles } = basics
+const { summary, name, email, phone, profiles, location } = basics
 ---
 
 <Section>
@@ -11,7 +12,20 @@ const { summary, name, email, phone, profiles } = basics
     {name && <h1 class="transition duration-300 ease-in-out pb-4">{name}.</h1>}
     <div class="flex flex-col gap-1">
       <h2>{summary}</h2>
-      <ContactBar email={email} phone={phone} profiles={profiles} name={name} />
+      <div class="flex flex-row gap-4">
+        <ContactBar
+          email={email}
+          phone={phone}
+          profiles={profiles}
+          name={name}
+        />
+        <Location
+          city={location.city}
+          countryCode={location.countryCode}
+          region={location.region}
+          class="text-xs font-semibold mt-3"
+        />
+      </div>
     </div>
   </div>
 </Section>
