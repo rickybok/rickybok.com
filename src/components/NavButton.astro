@@ -8,7 +8,7 @@ const { link, title } = Astro.props
 ---
 
 <a
-  class="font-semibold subNav text-left px-2 sm:px-6 transition display-block text-base pt-2 text-skin-muted hover:text-skin-base cursor-pointer"
+  class="font-semibold subNav text-left px-2 sm:px-6 transition display-block text-base pt-2 text-skin-muted hover:text-skin-base hover:no-underline cursor-pointer"
   id={`nav-${link.toLowerCase()}`}
   href={`#${link}`}
   >{title}
