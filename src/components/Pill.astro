@@ -16,4 +16,5 @@ const { label, class: className } = Astro.props
 >
   <slot />
   <span>{label}</span>
+  <slot name="extra" />
 </li>

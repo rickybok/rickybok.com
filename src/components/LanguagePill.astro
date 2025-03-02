@@ -11,10 +11,25 @@ interface Props {
 const { language, fluency, countryCode } = Astro.props
 ---
 
-<Pill label={`${language} ${fluency && `- ${fluency}`}`}>
+<Pill label={`${language}`}>
   {
     countryCode && (
-      <CountryIcon countryCode={countryCode} class="align-middle" />
+      <Fragment>
+        <CountryIcon countryCode={countryCode} class="align-middle" />
+      </Fragment>
+    )
+  }
+  {
+    fluency && (
+      <Fragment slot="extra">
+        -
+        <a
+          target="_blank"
+          href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels"
+        >
+          {fluency}
+        </a>
+      </Fragment>
     )
   }
 </Pill>
