@@ -7,7 +7,7 @@ interface Props {
 
 const { title } = Astro.props
 
-const { image, summary, url, theme } = basics
+const { summary, url, theme } = basics
 ---
 
 <!doctype html>
@@ -20,7 +20,6 @@ const { image, summary, url, theme } = basics
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="preload" as="image" href={image} />
 
     <meta property="og:url" content={url} />
     <meta property="og:type" content="website" />

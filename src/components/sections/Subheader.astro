@@ -3,14 +3,14 @@ import { SECTION_IDS } from "../Constants"
 import NavButton from "../NavButton.astro"
 ---
 
-<header
+<nav
   class="sticky top-14 mt-10 subHeader shadow-lg shadow-black pt-0 pb-3 flex backdrop-blur-sm"
 >
   <NavButton link=`${SECTION_IDS.skills}` title="Skills" />
   <NavButton link=`${SECTION_IDS.experience}` title="Experience" />
   <NavButton link=`${SECTION_IDS.education}` title="Education" />
   <NavButton link=`${SECTION_IDS.about}` title="About" />
-</header>
+</nav>
 
 <style>
   h1 {
