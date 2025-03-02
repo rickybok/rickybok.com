@@ -13,12 +13,12 @@ const { openByDefault = false, ...rest } = Astro.props
     <slot name="section-title" />
     <button
       @click="open = ! open"
-      class="w-fit cursor-pointer items-center justify-center mb-px gap-1.5 text-xs text-skin-muted hover:text-skin-base flex"
+      class="w-fit cursor-pointer items-center justify-center mb-px gap-1.5 text-sm text-skin-muted hover:text-skin-base flex"
     >
       <span x-text="open ? 'Hide' : 'Show'">Show</span>
       <svg
-        class="w-4 h-4 group-hover/more:translate-y-0.5 duration-200 ease-out"
-        :class="{ 'rotate-180': open }"
+        class="w-4 h-4 group-hover/more:translate-y-0.1 duration-200 ease-out"
+        :class="{ 'rotate-180': open, 'animate-bounce': !open, 'pt-1': !open }"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
