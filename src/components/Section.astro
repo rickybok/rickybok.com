@@ -7,10 +7,10 @@ const { class: className, title, sectionId, ...rest } = Astro.props
   class:list={["flex flex-col gap-4 pt-4", className]}
   {...rest}
 >
-  {sectionId && <a class="anchor" id={sectionId} />}
+  {sectionId && <a class="anchor" id={`anchor-${sectionId}`} />}
   {
     title && (
-      <h3 class="relative flex w-full items-center gap-3 pb-4 text-3xl">
+      <h3 class="relative flex w-full items-center gap-3 pb-4 text-3xl opacity-0">
         {title}
       </h3>
     )
@@ -25,4 +25,56 @@ const { class: className, title, sectionId, ...rest } = Astro.props
     top: -6em;
     visibility: hidden;
   }
+
+  .active h3 {
+    @apply animate-left-slide;
+    opacity: 1;
+  }
 </style>
+
+<script define:vars={{ sectionId }}>
+  const initSectionAppearAnimation = (targetId) => {
+    const observer = new IntersectionObserver(
+      ([{ isIntersecting }]) => {
+        const section = document.querySelector(`#container-${targetId}`)
+        if (isIntersecting) {
+          section.classList.add("active")
+        } else {
+          section.classList.remove("active")
+        }
+      },
+      { threshold: [0], rootMargin: "10% 0% -20%" },
+    )
+
+    const section = document.querySelector(`#anchor-${targetId}`)
+    if (!section) return
+
+    observer.observe(section)
+  }
+
+  const initNavHighlightBehaviour = (targetId) => {
+    const observer = new IntersectionObserver(
+      ([{ isIntersecting }]) => {
+        const navItem = document.querySelector(`#nav-${targetId}`)
+        if (!navItem) return
+
+        if (isIntersecting) {
+          navItem.classList.add("is-active")
+        } else {
+          navItem.classList.remove("is-active")
+        }
+      },
+      { threshold: [0], rootMargin: "-40%" },
+    )
+
+    const section = document.querySelector(`#container-${targetId}`)
+    if (!section) return
+
+    observer.observe(section)
+  }
+
+  if (sectionId) {
+    initNavHighlightBehaviour(sectionId)
+    initSectionAppearAnimation(sectionId)
+  }
+</script>

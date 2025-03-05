@@ -33,6 +33,21 @@ export default {
       ringColor: { skin: { fill: withOpacity("--color-fill") } },
       gradientColorStops: { skin: { hue: withOpacity("--color-fill") } },
       screens: { xs: "400px" },
+      animation: {
+        "left-slide": "text-slide 0.3s ease-out 1",
+      },
+      keyframes: {
+        "text-slide": {
+          "0%": {
+            transform: "translateX(-10%)",
+            opacity: 0,
+          },
+          "100%": {
+            transform: "translateX(0%)",
+            opacity: 1,
+          },
+        },
+      },
     },
   },
   variants: { extend: {} },

@@ -40,34 +40,3 @@ const { name, label } = basics
     scroll-behavior: smooth;
   }
 </style>
-
-<script>
-  const initNavHighlightBehaviour = () => {
-    const observer = new IntersectionObserver(
-      ([{ isIntersecting, target }]) => {
-        const navId = "#nav-" + target.id.replace("container-", "")
-        const navItem = document.querySelector(navId)
-        if (!navItem) return
-
-        if (isIntersecting) {
-          navItem.classList.add("is-active")
-        } else {
-          navItem.classList.remove("is-active")
-        }
-      },
-      { threshold: [0], rootMargin: "-40%" },
-    )
-
-    const sections: NodeListOf<HTMLElement> =
-      document.querySelectorAll(".anchor")
-
-    sections.forEach((element) => {
-      const section = document.querySelector(`#container-${element.id}`)
-      if (!section) return
-
-      observer.observe(section)
-    })
-  }
-
-  initNavHighlightBehaviour()
-</script>
