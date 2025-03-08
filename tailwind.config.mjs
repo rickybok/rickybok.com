@@ -34,17 +34,32 @@ export default {
       gradientColorStops: { skin: { hue: withOpacity("--color-fill") } },
       screens: { xs: "400px" },
       animation: {
-        "left-slide": "text-slide 0.3s ease-out 1",
+        "left-slide-in": "fade-in 0.3s ease-out 1, slide-left 0.3s ease-out 1",
+        "top-slide-in": "fade-in 0.2s ease-out 1, slide-top 0.2s ease-out 1",
       },
       keyframes: {
-        "text-slide": {
+        "fade-in": {
           "0%": {
-            transform: "translateX(-10%)",
             opacity: 0,
           },
           "100%": {
-            transform: "translateX(0%)",
             opacity: 1,
+          },
+        },
+        "slide-top": {
+          "0%": {
+            transform: "translateY(-30%)",
+          },
+          "100%": {
+            transform: "translateY(0%)",
+          },
+        },
+        "slide-left": {
+          "0%": {
+            transform: "translateX(-10%)",
+          },
+          "100%": {
+            transform: "translateX(0%)",
           },
         },
       },

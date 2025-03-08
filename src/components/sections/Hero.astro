@@ -46,26 +46,4 @@ const { summary, name, email, phone, profiles, location } = basics
   span {
     @apply flex items-center gap-1 text-xs text-skin-hue;
   }
-
-  @media (width <= 700px) {
-    .container {
-      flex-direction: column-reverse;
-    }
-
-    .info {
-      @apply md:items-center md:justify-center pr-0;
-    }
-
-    figure {
-      @apply flex md:items-center md:justify-center;
-    }
-
-    h2 {
-      text-wrap: balance;
-    }
-
-    figure {
-      @apply md:mx-auto;
-    }
-  }
 </style>

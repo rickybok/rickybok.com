@@ -27,7 +27,7 @@ const { class: className, title, sectionId, ...rest } = Astro.props
   }
 
   .active h3 {
-    @apply animate-left-slide;
+    @apply animate-left-slide-in;
     opacity: 1;
   }
 </style>
@@ -59,9 +59,9 @@ const { class: className, title, sectionId, ...rest } = Astro.props
         if (!navItem) return
 
         if (isIntersecting) {
-          navItem.classList.add("is-active")
+          navItem.classList.add("active")
         } else {
-          navItem.classList.remove("is-active")
+          navItem.classList.remove("active")
         }
       },
       { threshold: [0], rootMargin: "-40%" },
