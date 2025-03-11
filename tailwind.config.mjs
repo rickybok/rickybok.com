@@ -21,16 +21,20 @@ export default {
       },
       backgroundColor: {
         skin: {
-          fill: withOpacity("--color-fill"),
+          fill: withOpacity("--color-background"),
           "button-accent": withOpacity("--color"),
           "button-muted": withOpacity("--color-button-muted"),
         },
       },
       colors: {
-        skin: { hue: withOpacity("--color"), muted: withOpacity("--muted") },
+        skin: {
+          hue: withOpacity("--color"),
+          muted: withOpacity("--muted"),
+          background: withOpacity("--color-background"),
+        },
       },
-      ringColor: { skin: { fill: withOpacity("--color-fill") } },
-      gradientColorStops: { skin: { hue: withOpacity("--color-fill") } },
+      ringColor: { skin: { fill: withOpacity("--color-background") } },
+      gradientColorStops: { skin: { hue: withOpacity("--color-background") } },
       screens: { xs: "400px" },
       animation: {
         "left-slide-in": "fade-in 0.3s ease-out 1, slide-left 0.3s ease-out 1",

@@ -4,7 +4,7 @@ import NavButton from "../NavButton.astro"
 ---
 
 <nav
-  class="sticky top-14 mt-10 subHeader shadow-lg shadow-black pt-0 pb-3 flex backdrop-blur-sm"
+  class="sticky top-14 mt-10 subHeader shadow-lg shadow-skin-background pt-0 pb-3 flex backdrop-blur-sm"
 >
   <NavButton link=`${SECTION_IDS.skills}` title="Skills" />
   <NavButton link=`${SECTION_IDS.experience}` title="Experience" />
@@ -18,7 +18,7 @@ import NavButton from "../NavButton.astro"
   }
   .subHeader {
     border-top: 1px solid rgba(var(--color-button-muted), 100%);
-    background: rgba(var(--color-fill), 60%);
+    background: rgba(var(--color-background), 60%);
     z-index: 100;
   }
   .subHeader.stuck {
