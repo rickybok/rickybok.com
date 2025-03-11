@@ -7,7 +7,6 @@
     --color-fill: 18, 18, 18;
     --muted: 36, 36, 36;
     --color: 227, 77, 10;
-    --color-secondary: 227, 77, 10;
     --color-button-muted: 26, 26, 26;
     [data-theme="blue"] {
       --color-text-base: 248, 250, 252;
@@ -16,8 +15,16 @@
       --color-fill: 2, 6, 23;
       --muted: 51, 65, 85;
       --color: 134, 187, 216;
-      --color-secondary: 246, 174, 45;
       --color-button-muted: 30, 41, 59;
+    }
+    [data-theme="green"] {
+      --color-text-base: 248, 250, 252;
+      --color-text-muted: 148, 163, 184;
+      --color-text-inverted: 240, 240, 240;
+      --color-fill: 2, 14, 6;
+      --muted: 71, 95, 85;
+      --color: 117, 142, 79;
+      --color-button-muted: 71, 95, 85;
     }
   }
 }
